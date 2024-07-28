@@ -1,0 +1,42 @@
+.container-component-sidebar {
+    background-color: #222222;
+    height: 100%;
+    padding: 16px;
+    border-right: 1px solid #333333;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        
+        li {
+            list-style-type: none;
+
+            a {
+                display: block;
+                padding: 8px;
+                border-radius: 8px;
+                color: #754dee;
+                text-decoration: none;
+                font-weight: 600;
+                
+                &:hover {
+                    background-color: #333333;
+                }
+            }
+        }
+
+        &.area-external-links {
+            li {
+                a {
+                    position: relative;
+
+                    .fa {
+                        position: absolute;
+                        right: 8px;
+                        color: #754dee;
+                    }
+                }
+            }
+        }
+    }
+}
