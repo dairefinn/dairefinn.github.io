@@ -77,4 +77,4 @@ export const careerEntries: CareerEntry[] = [
         description: 'I was promoted to Senior Software Engineer after a few years of working at Frankli. I was responsible for overseeing the entire tech side of things. I managed a single junior developer and was responsible for making sure they were on track with their work.',
         link: 'https://getfrankli.com'
     }
-].sort((a, b) => a.date?.getTime() - b.date?.getTime());
+].sort((a, b) => b.date?.getTime() - a.date?.getTime());

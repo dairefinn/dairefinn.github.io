@@ -64,4 +64,4 @@ export const projects: ProjectItem[] = [
         link: 'https://github.com/dairefinn/slope_v2',
         date: new Date('2020-09-30')
     },
-].sort((a, b) => a.date?.getTime() - b.date?.getTime());
+].sort((a, b) => b.date?.getTime() - a.date?.getTime());
