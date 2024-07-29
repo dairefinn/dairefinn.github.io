@@ -1,3 +1,5 @@
+@use 'breakpoints';
+
 .text-left {
     text-align: left;
 }
@@ -12,10 +14,25 @@
 
 .side-by-side {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 16px;
 
     &.side-by-side-big-right {
-        grid-template-columns: 1fr 2fr;
+        @include breakpoints.md {
+            grid-template-columns: 1fr 2fr;
+        }
+    }
+
+    
+    &.side-by-side-big-left {
+        flex-direction: row-reverse;
+
+        @include breakpoints.md {
+            grid-template-columns: 2fr 1fr;
+        }
+    }
+
+    @include breakpoints.md {
+        grid-template-columns: 1fr 1fr;
     }
 }

@@ -2,6 +2,8 @@
 @use './assets/scss/headings';
 @use './assets/scss/images';
 @use './assets/scss/alignment';
+@use './assets/scss/breakpoints';
+@use './assets/scss/text';
 
 * {
   box-sizing: border-box;
@@ -14,9 +16,9 @@ body {
   background-color: theme.$gray-500;
   color: theme.$white-500;
   font-family: Segoe UI,Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;
+  position: relative;
 
   a {
     color: theme.$white-400;
   }
 }
-

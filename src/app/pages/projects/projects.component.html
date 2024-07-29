@@ -1,0 +1,33 @@
+<div class="container-component-project">
+    <div class="area-project-entries-list">
+        @for (projectItem of projectEntries; track projectItem) {
+            <div class="display-project-item">
+                <div class="display-project-item-date">
+                    <span>{{projectItem.date | date: 'd MMM yyyy'}}</span>
+                </div>
+                <div class="display-project-item-details">
+                    <div class="display-project-item-title">
+                        <span>{{projectItem.title}}</span>
+                    </div>
+
+                    @if (projectItem.link) {
+                        <div class="display-project-item-url">
+                            <span class="fa fa-fw fa-link"></span>
+                            <a [href]="projectItem.link" target="_blank" rel="noopener noreferrer">{{projectItem.link}}</a>
+                        </div>
+                    }
+
+                    <p>{{projectItem.description}}</p>
+
+                    @if (projectItem.tags && projectItem.tags.length > 0) {
+                        <div class="display-project-item-tags">
+                            @for (tag of projectItem.tags; track tag) {
+                                <span class="tag">{{tag}}</span>
+                            }
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</div>
