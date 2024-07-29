@@ -25,7 +25,7 @@ export class SidebarComponent {
     {
       title: 'GitHub',
       icon: 'fa-brands fa-fw fa-github',
-      route: '"https://github.com/dairefinn',
+      route: 'https://github.com/dairefinn',
       isExternal: true
     },
     {
