@@ -8,6 +8,11 @@ export const routes: Routes = [
     path: '',
     children: [
       {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full',
+      },
+      {
         path: 'home',
         component: HomepageComponent,
       },
@@ -18,7 +23,7 @@ export const routes: Routes = [
       {
         path: 'career',
         component: CareerComponent,
-      }
-    ]
-  }
+      },
+    ],
+  },
 ];

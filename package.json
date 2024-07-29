@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:production": "ng build && cp dist/dairefinn.github.io/browser/index.html dist/dairefinn.github.io/browser/404.html",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
