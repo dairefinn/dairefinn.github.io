@@ -4,21 +4,21 @@ import { CareerComponent } from './career/career.component';
 import { ProjectsComponent } from './projects/projects.component';
 
 export const routes: Routes = [
-    {
-        path: '',
-        redirectTo: 'home',
-        pathMatch: 'full'
-    },
-    {
+  {
+    path: '',
+    children: [
+      {
         path: 'home',
-        component: HomepageComponent
-    },
-    {
+        component: HomepageComponent,
+      },
+      {
         path: 'projects',
-        component: ProjectsComponent
-    },
-    {
+        component: ProjectsComponent,
+      },
+      {
         path: 'career',
-        component: CareerComponent
-    }
+        component: CareerComponent,
+      }
+    ]
+  }
 ];
