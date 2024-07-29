@@ -22,7 +22,7 @@ export const careerEntries: CareerEntry[] = [
         description: `
         I started my degree in computing at ATU Sligo. I chose this course because I had always been interested in computers and technology.
         This course also offered a nice divide between software and networking to begin with, after which you could elect to focus on one or the other.
-        My father works in networking which led to me go down the software route as I had already picked up some knowledge from him.
+        My father works in networking so I decided to take the software route as I had already picked up some knowledge from him.
         I feel like the course laid a good foundation for me and I learned a lot of the basics of software development.
         More importantly, I met some of my best friends there who I learn new things from every day.
         `,
