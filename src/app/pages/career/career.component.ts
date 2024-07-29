@@ -19,7 +19,7 @@ export class CareerComponent implements OnInit {
   careerEntries: CareerEntry[] = [];
 
   ngOnInit(): void {
-    this.careerEntries = careerEntries.reverse();
+    this.careerEntries = careerEntries;
   }
 
 }

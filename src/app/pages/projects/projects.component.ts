@@ -16,7 +16,7 @@ export class ProjectsComponent implements OnInit{
   projectEntries: ProjectItem[] = [];
 
   ngOnInit(): void {
-    this.projectEntries = projects.reverse();
+    this.projectEntries = projects;
   }
 
 }
