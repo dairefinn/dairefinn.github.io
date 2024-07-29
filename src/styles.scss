@@ -1,8 +1,15 @@
+@use './assets/scss/theme';
+
 body {
   margin: 0;
-  /* TODO: Add colours to theme file */
-  background-color: #202020;
-  color: #EEEEEE;
-  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: theme.$gray-500;
+  color: theme.$white-500;
+  font-family: Segoe UI,Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;
+
+  a {
+    color: theme.$white-400;
+  }
 }
 
