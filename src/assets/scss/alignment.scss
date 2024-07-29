@@ -1,0 +1,21 @@
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.side-by-side {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+
+    &.side-by-side-big-right {
+        grid-template-columns: 1fr 2fr;
+    }
+}
