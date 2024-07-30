@@ -8,7 +8,4 @@ DNS configured through Cloudflare.
 
 ## To do list
 
-- Responsive UI (Collapse sidebar on mobile views)
 - Populate the Home page
-- Populate the Projects page
-- Populate the Career page

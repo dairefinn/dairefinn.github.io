@@ -17,12 +17,12 @@
                         </div>
                     }
 
-                    <p>{{projectItem.description}}</p>
+                    <p [innerHTML]="projectItem.description"></p>
 
                     @if (projectItem.tags && projectItem.tags.length > 0) {
                         <div class="display-project-item-tags">
                             @for (tag of projectItem.tags; track tag) {
-                                <span class="tag">{{tag}}</span>
+                                <span class="tag-item">{{tag}}</span>
                             }
                         </div>
                     }

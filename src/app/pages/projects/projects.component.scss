@@ -36,9 +36,24 @@
                 .display-project-item-tags {
                     display: flex;
                     flex-wrap: wrap;
+                    align-items: center;
                     gap: 16px;
                     color: theme.$white-400;
                     cursor: default;
+                    font-weight: 600;
+                    // justify-content: flex-end;
+                    // padding: 8px 16px;
+                    // border-top: 1px solid theme.$gray-300;
+
+                    .tag-item {
+                        border: 1px solid  theme.$gray-300;
+                        padding: 8px;
+                        border-radius: 4px;
+                        line-height: 0.5rem;
+                        font-size: 0.5rem;
+                        vertical-align: middle;
+                        font-weight: 600;
+                    }
                 }
             }
         }
