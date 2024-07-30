@@ -140,4 +140,4 @@ export const careerEntries: CareerEntry[] = [
         `,
     date: new Date(),
   }
-].sort((a, b) => a.date?.getTime() - b.date?.getTime());
+].sort((a, b) => b.date?.getTime() - a.date?.getTime());
