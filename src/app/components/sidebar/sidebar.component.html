@@ -6,12 +6,7 @@
     <div class="area-navigation">
         <ul class="area-internal-links">
             @for (sidebarItem of internalLinks; track sidebarItem) {
-                <li>
-                    <a [routerLink]="sidebarItem.route" routerLinkActive="active">
-                        <span [ngClass]="sidebarItem.icon"></span>
-                        <span class="navigation-link-title">{{ sidebarItem.title }}</span>
-                    </a>
-                </li>
+                <app-sidebar-link [sidebarItem]="sidebarItem"></app-sidebar-link>
             }
         </ul>
 
@@ -19,15 +14,7 @@
 
         <ul class="area-external-links">
             @for (sidebarItem of externalLinks; track sidebarItem) {
-                <li>
-                    <a [href]="sidebarItem.route" target="_blank">
-                        <span [ngClass]="sidebarItem.icon"></span>
-                        <span class="navigation-link-title">{{ sidebarItem.title }}</span>
-                        @if (sidebarItem.isExternal) {
-                            <span class="fa fa-fw fa-arrow-up-right-from-square"></span>
-                        }
-                    </a>
-                </li>
+                <app-sidebar-link [sidebarItem]="sidebarItem"></app-sidebar-link>
             }
         </ul>
     </div>

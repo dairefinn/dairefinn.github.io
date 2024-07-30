@@ -1,0 +1,22 @@
+@if (sidebarItem) {
+    <li>
+        @if (sidebarItem.isExternal) {
+            <a [href]="sidebarItem.route" target="_blank">
+                <ng-container *ngTemplateOutlet="linkInnerContent"></ng-container>
+            </a>
+        }
+        @else {
+            <a [routerLink]="sidebarItem.route" routerLinkActive="active">
+                <ng-container *ngTemplateOutlet="linkInnerContent"></ng-container>
+            </a>
+        }
+
+        <ng-template #linkInnerContent>
+            <span [ngClass]="sidebarItem.icon"></span>
+            <span class="navigation-link-title">{{ sidebarItem.title }}</span>
+            @if (sidebarItem.isExternal) {
+                <span class="fa fa-fw fa-arrow-up-right-from-square"></span>
+            }
+        </ng-template>
+    </li>
+}

@@ -1,20 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-
-interface SidebarLinkItem {
-  title: string;
-  icon: string;
-  route: string;
-  isExternal?: boolean;
-}
+import { SidebarLinkComponent, SidebarLinkItem } from '../sidebar-link/sidebar-link.component';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
   imports: [
-    RouterModule,
-    CommonModule
+    CommonModule,
+    SidebarLinkComponent
   ],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'
@@ -32,6 +25,12 @@ export class SidebarComponent {
       title: 'LinkedIn',
       icon: 'fa-brands fa-fw fa-linkedin',
       route: 'https://www.linkedin.com/in/daire-finn-44b883263/',
+      isExternal: true
+    },
+    {
+      title: 'Spotify',
+      icon: 'fa-brands fa-fw fa-spotify',
+      route: 'https://open.spotify.com/user/dman355/',
       isExternal: true
     }
   ];

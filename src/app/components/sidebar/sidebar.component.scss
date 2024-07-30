@@ -34,43 +34,7 @@
         margin: 0;
         padding: 0;
         flex-wrap: wrap;
-        
-        li {
-            list-style-type: none;
-            margin-bottom: 8px;
-            cursor: pointer;
-
-            a {
-                font-size: .8rem;
-                padding: 8px 16px;
-                border-radius: 8px;
-                text-decoration: none;
-                font-weight: 600;
-                display: grid;
-                grid-template-columns: auto 1fr auto;
-                gap: .75rem;
-                align-items: center;
-                
-                &:hover {
-                    background-color: theme.$gray-300;
-                }
-                
-                &.active {
-                    background-color: theme.$gray-600;
-                }
-
-                & > .navigation-link-title {
-                    line-height: .8rem;
-                }
-            }
-        }
-
-        &.area-external-links {
-            li {
-                a {
-                }
-            }
-        }
+        user-select: none;
     }
 
     @include breakpoints.md {
