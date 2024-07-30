@@ -2,49 +2,53 @@
     <div class="area-career-entries-list">
         @for (careerItem of careerEntries; track careerItem) {
             <div class="display-career-item" [ngClass]="'career-item-type-' + careerItem.type">
-                <div class="display-career-item-date">
-                    <span>{{careerItem.date | date: 'd MMM yyyy'}}</span>
+                <div class="display-career-item-date">{{careerItem.date | date: 'MMM yyyy'}}</div>
+                <div class="display-career-item-timeline">
+                    <div class="timeline-circle"></div>
+                    <div class="timeline-line"></div>
                 </div>
                 <div class="display-career-item-details">
                     <div class="display-career-item-title">
                         @switch (careerItem.type) {
                             @case (eCareerEntryType.EVENT) {
-                                <span class="fa fa-fw fa-calendar"></span>
+                                <span class="fa fa-fw fa-calendar" title="Event"></span>
                             }
                             @case (eCareerEntryType.POSITION) {
-                                <span class="fa fa-fw fa-briefcase"></span>
+                                <span class="fa fa-fw fa-briefcase" title="New position"></span>
                             }
                             @case (eCareerEntryType.CERTIFICATION) {
-                                <span class="fa fa-fw fa-certificate"></span>
+                                <span class="fa fa-fw fa-certificate" title="Certification"></span>
                             }
                         }
                         <span>{{careerItem.title}}</span>
                     </div>
-                    <div class="display-career-item-where">
-                        @if (careerItem.company) {
-                            @if (careerItem.link) {
-                                <div class="display-career-item-company">
-                                    <a [href]="careerItem.link" target="_blank">
+                    @if (careerItem.company || careerItem.location) {
+                        <div class="display-career-item-where">
+                            @if (careerItem.company) {
+                                @if (careerItem.link) {
+                                    <div class="display-career-item-company">
+                                        <a [href]="careerItem.link" target="_blank">
+                                            <span class="fa fa-fw fa-building"></span>
+                                            <span>{{careerItem.company}}</span>
+                                        </a>
+                                    </div>
+                                }
+                                @else {
+                                    <div class="display-career-item-company">
                                         <span class="fa fa-fw fa-building"></span>
                                         <span>{{careerItem.company}}</span>
-                                    </a>
+                                    </div>
+                                }
+                            }
+                            @if (careerItem.location) {
+                                <div class="display-career-item-location">
+                                    <span class="fa fa-fw fa-map-marker"></span>
+                                    <span>{{careerItem.location}}</span>
                                 </div>
                             }
-                            @else {
-                                <div class="display-career-item-company">
-                                    <span class="fa fa-fw fa-building"></span>
-                                    <span>{{careerItem.company}}</span>
-                                </div>
-                            }
-                        }
-                        @if (careerItem.location) {
-                            <div class="display-career-item-location">
-                                <span class="fa fa-fw fa-map-marker"></span>
-                                <span>{{careerItem.location}}</span>
-                            </div>
-                        }
-                    </div>
-                    <p>{{careerItem.description}}</p>
+                        </div>
+                    }
+                    <p [innerHTML]="careerItem.description"></p>
                 </div>
             </div>
         }
