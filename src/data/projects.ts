@@ -1,6 +1,7 @@
 export enum ProjectTypeTag {
     WEB_DEV = 'Web dev',
     GAME_DEV = 'Game dev',
+    DEV_OPS = 'DevOps',
     SHELL = 'Shell scripting',
     NETWORKING = 'Networking',
     FORK = 'Fork',
@@ -29,7 +30,7 @@ export const projects: ProjectItem[] = [
             <br/><br/>
             Now the site works perfectly and I can push changes to it by simply pushing to the master branch. On top of that, the hosting is 100% free.
             `,
-        tags: [ProjectTypeTag.WEB_DEV],
+        tags: [ProjectTypeTag.WEB_DEV, ProjectTypeTag.DEV_OPS],
         link: 'https://github.com/dairefinn/dairefinn.github.io',
         date: new Date('2024-07-29')
     },

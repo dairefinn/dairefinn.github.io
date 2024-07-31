@@ -1,4 +1,5 @@
 @use 'theme';
+@use 'breakpoints';
 
 .container-component-project {
     .area-project-entries-list {
@@ -7,12 +8,9 @@
         gap: 32px;
 
         .display-project-item {
-            display: grid;
-            grid-template-columns: 90px 1fr;
             gap: 32px;
     
             .display-project-item-date {
-                text-align: right;
                 font-size: 0.8rem;
                 color: theme.$white-400;
             }
@@ -54,6 +52,15 @@
                         vertical-align: middle;
                         font-weight: 600;
                     }
+                }
+            }
+
+            @include breakpoints.md {
+                display: grid;
+                grid-template-columns: 90px 1fr;
+
+                .display-project-item-date {
+                    text-align: right;
                 }
             }
         }
