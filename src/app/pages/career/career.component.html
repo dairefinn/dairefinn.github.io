@@ -2,12 +2,13 @@
     <div class="area-career-entries-list">
         @for (careerItem of careerEntries; track careerItem) {
             <div class="display-career-item" [ngClass]="'career-item-type-' + careerItem.type">
-                <div class="display-career-item-date">{{careerItem.date | date: 'MMM yyyy'}}</div>
+                <div class="display-career-item-date-desktop">{{careerItem.date | date: 'MMM yyyy'}}</div>
                 <div class="display-career-item-timeline">
                     <div class="timeline-circle"></div>
                     <div class="timeline-line"></div>
                 </div>
                 <div class="display-career-item-details">
+                    <div class="display-career-item-date-mobile">{{careerItem.date | date: 'MMM yyyy'}}</div>
                     <div class="display-career-item-title">
                         @switch (careerItem.type) {
                             @case (eCareerEntryType.EVENT) {
