@@ -261,6 +261,6 @@ export const skillEntries: SkillItem[] = [
                 description: 'I used XD for some college projects, mainly a large group project that we had to do in third year.'
             }
         ],
-        tags: [Tag.LANGUAGE, Tag.UI_UX]
+        tags: [Tag.DESIGN, Tag.UI_UX]
     }
 ]
