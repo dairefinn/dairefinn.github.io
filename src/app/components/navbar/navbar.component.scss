@@ -1,0 +1,36 @@
+@use 'theme';
+
+.container-component-navbar {
+    background-color: theme.$gray-400;
+    display: flex;
+    border-bottom: 1px solid theme.$gray-200;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    position: relative;
+
+    .area-hamburger-menu {
+        padding: 16px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: theme.$gray-300;
+        }
+    }
+
+    .area-branding {
+        font-weight: 600;
+        padding: 16px;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        cursor: default;
+        user-select: none;
+        pointer-events: none;
+    }
+}

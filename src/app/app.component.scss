@@ -1,3 +1,4 @@
+@use 'theme';
 @use 'breakpoints';
 
 .app-wrapper {
@@ -9,23 +10,47 @@
         position: sticky;
         top: 0;
         max-height: 100vh;
+        display: none;
     }
 
-    .container-page {
-        padding: 32px;
-        max-height: 100vh;
-        overflow: auto;
-        text-align: center;
-        
-        .container-page-inner {
-            display: inline-block;
-            text-align: left;
-            max-width: 700px;
-            margin-bottom: 64px;
+    .container-main-page {
+        .container-page {
+            padding: 32px;
+            max-height: 100vh;
+            overflow: auto;
+            text-align: center;
+            
+            .container-page-inner {
+                display: inline-block;
+                text-align: left;
+                max-width: 700px;
+                margin-bottom: 64px;
+            }
+        }
+    }
+
+    &.mobile-sidebar-open {
+        grid-template-columns: auto 1fr;
+
+        .container-sidebar {
+            display: block;
+            height: 100%;
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+            // bottom: 0;
         }
     }
 
     @include breakpoints.md {
-        grid-template-columns: auto 1fr;
+        .container-sidebar {
+            display: block;
+        }
+
+        .container-main-page {
+            .container-navbar-mobile {
+                display: none;
+            }
+        }
     }
 }

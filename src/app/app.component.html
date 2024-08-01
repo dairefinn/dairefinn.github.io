@@ -1,10 +1,15 @@
-<div class="app-wrapper">
+<div class="app-wrapper" [class.mobile-sidebar-open]="mobileSidebarService.isSidebarOpen">
   <div class="container-sidebar">
     <app-sidebar></app-sidebar>
   </div>
-  <div class="container-page">
-    <div class="container-page-inner">
-      <router-outlet></router-outlet>
+  <div class="container-main-page">
+    <div class="container-navbar-mobile">
+      <app-navbar></app-navbar>
+    </div>
+    <div class="container-page">
+      <div class="container-page-inner">
+        <router-outlet></router-outlet>
+      </div>
     </div>
   </div>
 </div>

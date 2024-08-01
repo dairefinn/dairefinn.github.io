@@ -6,17 +6,15 @@
     padding: 16px;
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid theme.$gray-200;
+    border-right: 1px solid theme.$gray-200;
+    width: 200px;
+    height: 100%;
 
     .area-branding {
+        display: none;
         font-size: 1.2rem;
         font-weight: 600;
         margin-bottom: 1rem;
-
-        img {
-            width: 100%;
-            border-radius: 8px;
-        }
     }
 
     .navigation-heading {
@@ -24,13 +22,13 @@
         font-weight: 600;
         margin-bottom: 8px;
         color: theme.$white-300;
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
     }
 
     ul {
-        flex-direction: row;
         display: flex;
+        flex-direction: column;
         margin: 0;
         padding: 0;
         flex-wrap: wrap;
@@ -38,17 +36,8 @@
     }
 
     @include breakpoints.md {
-        border-right: 1px solid theme.$gray-200;
-        width: 200px;
-        height: 100%;
-
-        ul {
-            flex-direction: column;
-        }
-
-        .navigation-heading {
-            margin-top: 2rem;
-            margin-bottom: 1rem;
+        .area-branding {
+            display: block;
         }
     }
 }
