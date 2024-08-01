@@ -86,9 +86,10 @@
 
             &.career-item-type-Position {
                 .display-career-item-details {
-                    border: 1px solid theme.$gray-200;
                     border-radius: 8px;
                     padding: 16px;
+                    background-color: theme.$gray-400;
+                    border: 1px solid theme.$gray-200;
                 }
             }
 
