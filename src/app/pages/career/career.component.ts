@@ -1,25 +1,28 @@
-import { Component, OnInit } from '@angular/core';
-import { careerEntries, CareerEntry, CareerEntryType } from '../../../data/career';
-import { CommonModule, DatePipe, NgClass } from '@angular/common';
+import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { NavigationTabOption, NavigationTabsComponent } from '../../components/navigation-tabs/navigation-tabs.component';
 
 @Component({
   selector: 'app-career',
   standalone: true,
   imports: [
-    DatePipe,
-    CommonModule
+    RouterModule,
+    NavigationTabsComponent
   ],
   templateUrl: './career.component.html',
   styleUrl: './career.component.scss'
 })
-export class CareerComponent implements OnInit {
-  
-  public readonly eCareerEntryType = CareerEntryType;
+export class CareerComponent {
 
-  careerEntries: CareerEntry[] = [];
-
-  ngOnInit(): void {
-    this.careerEntries = careerEntries;
-  }
+  optionsNavigation: NavigationTabOption[] = [
+    {
+      label: 'History',
+      route: 'history'
+    },
+    {
+      label: 'Skills',
+      route: 'skills'
+    }
+  ];
 
 }

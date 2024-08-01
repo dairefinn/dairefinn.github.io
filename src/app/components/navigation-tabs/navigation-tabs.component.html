@@ -1,0 +1,7 @@
+<div class="container-component-navigation-tabs">
+    @for(option of options; track option) {
+        <div class="navigation-tab-item" routerLinkActive="active" [routerLink]="option.route">
+            {{ option.label }}
+        </div>
+    }
+</div>

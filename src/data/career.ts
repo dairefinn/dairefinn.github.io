@@ -1,7 +1,7 @@
 export enum CareerEntryType {
-  EVENT = 'EVENT',
-  CERTIFICATION = 'CERTIFICATION',
-  POSITION = 'POSITION',
+  EVENT = 'Event',
+  CERTIFICATION = 'Certification',
+  POSITION = 'Position',
 }
 
 export type CareerEntry = {

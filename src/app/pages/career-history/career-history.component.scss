@@ -1,0 +1,117 @@
+@use 'theme';
+@use 'breakpoints';
+
+.container-component-career-history {
+    .area-career-entries-list {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+        scroll-snap-type: y mandatory;
+
+        .display-career-item {
+            display: grid;
+            grid-template-columns: 24px 1fr;
+            gap: 16px;
+            scroll-snap-align: start;
+
+            .display-career-item-timeline {
+                position: relative;
+
+                .timeline-circle {
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background-color: theme.$white-400;
+                    margin: 12px 8px;
+                }
+
+                .timeline-line {
+                    display: none;
+                    width: 2px;
+                    // height: 100%;
+                    background-color: theme.$white-400;
+                    position: absolute;
+                    left: calc(24px - 50%);
+                    top: 20px;
+                    bottom: -78px;
+                    transform: translateX(-50%);
+                }
+            }
+    
+                
+            .display-career-item-date-desktop,
+            .display-career-item-date-mobile {
+                font-size: 0.8rem;
+                color: theme.$white-400;
+                height: 2rem;
+                align-items: center;
+                text-wrap: nowrap;
+            }
+    
+            .display-career-item-date-desktop {
+                font-size: 0.8rem;
+                color: theme.$white-400;
+                height: 2rem;
+                justify-content: flex-end;
+                align-items: center;
+                text-wrap: nowrap;
+                margin-right: -16px;
+                margin-top: -1px;
+                display: none;
+            }
+
+            .display-career-item-date-mobile {
+                display: flex;
+            }
+    
+            .display-career-item-details {
+                display: flex;
+                flex-direction: column;
+
+                .display-career-item-title {
+                    display: flex;
+                    gap: 16px;
+                    align-items: center;
+                    font-weight: 600;
+                    font-size: 1.25rem;
+                }
+    
+                .display-career-item-where {
+                    padding-top: 8px;
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+                    color: theme.$white-400;
+                }
+            }
+
+            // &.career-item-type-POSITION {
+            //     .display-career-item-details {
+            //         border: 1px solid theme.$gray-200;
+            //         border-radius: 8px;
+            //         padding: 16px;
+            //     }
+            // }
+
+            &:not(:last-child) {
+                .display-career-item-timeline {
+                    .timeline-line {
+                        display: block;
+                    }
+                }
+            }
+
+            @include breakpoints.md {
+                grid-template-columns: 50px 24px 1fr;
+
+                .display-career-item-date-desktop {
+                    display: flex;
+                }
+
+                .display-career-item-date-mobile {
+                    display: none;
+                }
+            }
+        }
+    }
+}

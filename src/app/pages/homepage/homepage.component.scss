@@ -1,9 +1,13 @@
 .container-component-homepage {
     padding-top: 10px;
 
-    .headshot {
-        width: 100%;
+    .headshot-container {
         max-width: 500px;
         justify-self: center;
+        padding: 0 16px;
+
+        .headshot {
+            width: 100%;
+        }
     }
 }

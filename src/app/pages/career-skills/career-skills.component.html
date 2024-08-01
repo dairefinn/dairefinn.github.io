@@ -1,0 +1,7 @@
+<div class="container-component-skill">
+    <div class="area-skill-entries-list">
+        @for (skillItem of skillEntries; track skillItem) {
+            <app-skill [skill]="skillItem"></app-skill>
+        }
+    </div>
+</div>

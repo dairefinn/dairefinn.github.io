@@ -21,8 +21,8 @@
 
                     @if (projectItem.tags && projectItem.tags.length > 0) {
                         <div class="display-project-item-tags">
-                            @for (tag of projectItem.tags; track tag) {
-                                <span class="tag-item">{{tag}}</span>
+                            @for (tagItem of projectItem.tags; track tagItem) {
+                                <app-tag [tag]="tagItem"></app-tag>
                             }
                         </div>
                     }

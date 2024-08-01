@@ -21,6 +21,6 @@ export interface SidebarLinkItem {
 })
 export class SidebarLinkComponent {
 
-  @Input() sidebarItem!: SidebarLinkItem;
+  @Input() sidebarItem?: SidebarLinkItem;
 
 }
