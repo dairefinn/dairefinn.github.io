@@ -1,9 +1,9 @@
 <div class="container-component-technology">
     <div class="area-technology-entries-list">
         @for (technologyItem of technologyEntries; track technologyItem) {
-            <div class="wrapper-technology-item">
+            <app-card>
                 <app-technology [technology]="technologyItem"></app-technology>
-            </div>
+            </app-card>
         }
     </div>
 </div>

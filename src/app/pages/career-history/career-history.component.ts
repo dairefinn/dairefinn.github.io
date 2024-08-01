@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import { CareerEntryType, CareerEntry, careerEntries } from '../../../data/career';
 import { CommonModule, DatePipe } from '@angular/common';
+import { CardComponent } from '../../components/card/card.component';
 
 @Component({
   selector: 'app-career-history',
   standalone: true,
   imports: [
     DatePipe,
-    CommonModule
+    CommonModule,
+    CardComponent
   ],
   templateUrl: './career-history.component.html',
   styleUrl: './career-history.component.scss'

@@ -10,7 +10,7 @@
         .display-project-item {
             .display-project-item-date {
                 font-size: 0.8rem;
-                color: theme.$white-400;
+                color: theme.$white-300;
             }
     
             .display-project-item-details {
@@ -26,7 +26,7 @@
                     display: flex;
                     gap: 8px;
                     align-items: center;
-                    color: theme.$white-400;
+                    color: theme.$white-300;
                 }
 
                 .display-project-item-tags {
@@ -34,7 +34,7 @@
                     flex-wrap: wrap;
                     align-items: center;
                     gap: 16px;
-                    color: theme.$white-400;
+                    color: theme.$white-300;
                     cursor: default;
                     font-weight: 600;
                 }

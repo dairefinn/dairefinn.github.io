@@ -21,14 +21,14 @@
                     width: 8px;
                     height: 8px;
                     border-radius: 50%;
-                    background-color: theme.$white-400;
+                    background-color: theme.$white-300;
                     margin: 12px 8px;
                 }
 
                 .timeline-line {
                     display: none;
                     width: 2px;
-                    background-color: theme.$white-400;
+                    background-color: theme.$white-300;
                     position: absolute;
                     left: calc(24px - 50%);
                     top: 20px;
@@ -41,7 +41,7 @@
             .display-career-item-date-desktop,
             .display-career-item-date-mobile {
                 font-size: 0.8rem;
-                color: theme.$white-400;
+                color: theme.$white-300;
                 height: 2rem;
                 align-items: center;
                 text-wrap: nowrap;
@@ -49,7 +49,7 @@
     
             .display-career-item-date-desktop {
                 font-size: 0.8rem;
-                color: theme.$white-400;
+                color: theme.$white-300;
                 height: 2rem;
                 justify-content: flex-end;
                 align-items: center;
@@ -80,16 +80,7 @@
                     display: flex;
                     gap: 8px;
                     align-items: center;
-                    color: theme.$white-400;
-                }
-            }
-
-            &.career-item-type-Position {
-                .display-career-item-details {
-                    border-radius: 8px;
-                    padding: 16px;
-                    background-color: theme.$gray-400;
-                    border: 1px solid theme.$gray-200;
+                    color: theme.$white-300;
                 }
             }
 

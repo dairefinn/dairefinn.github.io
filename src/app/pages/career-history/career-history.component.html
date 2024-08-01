@@ -8,48 +8,59 @@
                     <div class="timeline-line"></div>
                 </div>
                 <div class="display-career-item-details">
-                    <div class="display-career-item-date-mobile">{{careerItem.date | date: 'MMM yyyy'}}</div>
-                    <div class="display-career-item-title">
-                        @switch (careerItem.type) {
-                            @case (eCareerEntryType.EVENT) {
-                                <span class="fa fa-fw fa-calendar" [title]="eCareerEntryType.EVENT"></span>
+                    @if (careerItem.type === eCareerEntryType.POSITION) {
+                        <app-card>
+                            <ng-container *ngTemplateOutlet="detailsContent"></ng-container>
+                        </app-card>
+                    }
+                    @else {
+                        <ng-container *ngTemplateOutlet="detailsContent"></ng-container>
+                    }
+
+                    <ng-template #detailsContent>
+                        <div class="display-career-item-date-mobile">{{careerItem.date | date: 'MMM yyyy'}}</div>
+                        <div class="display-career-item-title">
+                            @switch (careerItem.type) {
+                                @case (eCareerEntryType.EVENT) {
+                                    <span class="fa fa-fw fa-calendar" [title]="eCareerEntryType.EVENT"></span>
+                                }
+                                @case (eCareerEntryType.POSITION) {
+                                    <span class="fa fa-fw fa-briefcase" [title]="eCareerEntryType.POSITION"></span>
+                                }
+                                @case (eCareerEntryType.CERTIFICATION) {
+                                    <span class="fa fa-fw fa-certificate" [title]="eCareerEntryType.CERTIFICATION"></span>
+                                }
                             }
-                            @case (eCareerEntryType.POSITION) {
-                                <span class="fa fa-fw fa-briefcase" [title]="eCareerEntryType.POSITION"></span>
-                            }
-                            @case (eCareerEntryType.CERTIFICATION) {
-                                <span class="fa fa-fw fa-certificate" [title]="eCareerEntryType.CERTIFICATION"></span>
-                            }
-                        }
-                        <span>{{careerItem.title}}</span>
-                    </div>
-                    @if (careerItem.company || careerItem.location) {
-                        <div class="display-career-item-where">
-                            @if (careerItem.company) {
-                                @if (careerItem.link) {
-                                    <div class="display-career-item-company">
-                                        <a [href]="careerItem.link" target="_blank">
+                            <span>{{careerItem.title}}</span>
+                        </div>
+                        @if (careerItem.company || careerItem.location) {
+                            <div class="display-career-item-where">
+                                @if (careerItem.company) {
+                                    @if (careerItem.link) {
+                                        <div class="display-career-item-company">
+                                            <a [href]="careerItem.link" target="_blank">
+                                                <span class="fa fa-fw fa-building"></span>
+                                                <span>{{careerItem.company}}</span>
+                                            </a>
+                                        </div>
+                                    }
+                                    @else {
+                                        <div class="display-career-item-company">
                                             <span class="fa fa-fw fa-building"></span>
                                             <span>{{careerItem.company}}</span>
-                                        </a>
+                                        </div>
+                                    }
+                                }
+                                @if (careerItem.location) {
+                                    <div class="display-career-item-location">
+                                        <span class="fa fa-fw fa-map-marker"></span>
+                                        <span>{{careerItem.location}}</span>
                                     </div>
                                 }
-                                @else {
-                                    <div class="display-career-item-company">
-                                        <span class="fa fa-fw fa-building"></span>
-                                        <span>{{careerItem.company}}</span>
-                                    </div>
-                                }
-                            }
-                            @if (careerItem.location) {
-                                <div class="display-career-item-location">
-                                    <span class="fa fa-fw fa-map-marker"></span>
-                                    <span>{{careerItem.location}}</span>
-                                </div>
-                            }
-                        </div>
-                    }
-                    <p [innerHTML]="careerItem.description"></p>
+                            </div>
+                        }
+                        <p [innerHTML]="careerItem.description"></p>
+                    </ng-template>
                 </div>
             </div>
         }
