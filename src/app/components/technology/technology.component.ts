@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { TechnologyItemExperienceType, TechnologyItem } from '../../../data/technologies';
+import { TechnologyItem } from '../../../data/technologies';
 import { TagComponent } from '../tag/tag.component';
 
 @Component({
@@ -13,8 +13,6 @@ import { TagComponent } from '../tag/tag.component';
 })
 export class TechnologyComponent {
 
-  public readonly eTechnologyItemExperienceType = TechnologyItemExperienceType;
-
   @Input() technology?: TechnologyItem;
 
   showExperience: boolean = true;
@@ -22,4 +20,5 @@ export class TechnologyComponent {
   toggleShowExperience(): void {
     this.showExperience = !this.showExperience;
   }
+
 }

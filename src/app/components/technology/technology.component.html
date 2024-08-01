@@ -4,9 +4,7 @@
             <div class="display-technology-item-title">
                 <span>{{technology.title}}</span>
             </div>
-    
-            <!-- <p [innerHTML]="technology.description"></p> -->
-    
+
             <!-- @if (technology.tags && technology.tags.length > 0) {
                 <div class="display-technology-item-tags">
                     @for (tagItem of technology.tags; track tagItem) {
@@ -14,26 +12,13 @@
                     }
                 </div>
             } -->
-    
+
             @if (technology.experience && technology.experience.length > 0) {
-                <!-- <div class="toggle-show-experience" (click)="toggleShowExperience()">{{showExperience ? 'Hide experience' : 'Show experience'}}</div> -->
                 @if(showExperience) {
                     <div class="display-technology-item-experience">
                         @for (experienceItem of technology.experience; track experienceItem) {
                             <div class="display-experience-item">
                                 <div class="display-experience-title">
-                                    <!-- @switch(experienceItem.type) {
-                                        @case(eTechnologyExperienceType.PERSONAL) {
-                                            <span class="fa fa-fw fa-mug-saucer" [title]="eTechnologyExperienceType.PERSONAL"></span>
-                                        }
-                                        @case(eTechnologyExperienceType.PROFESSIONAL) {
-                                            <span class="fa fa-fw fa-briefcase" [title]="eTechnologyExperienceType.PROFESSIONAL"></span>
-                                        }
-                                        @case(eTechnologyExperienceType.EDUCATION) {
-                                            <span class="fa fa-fw fa-graduation-cap" [title]="eTechnologyExperienceType.EDUCATION"></span>
-                                        }
-                                     } -->
-
                                     <span>{{experienceItem.title}}</span>
                                 </div>
                                 @if (experienceItem.description) {

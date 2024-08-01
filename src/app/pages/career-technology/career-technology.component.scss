@@ -2,19 +2,6 @@
 @use 'breakpoints';
 
 .container-component-technology {
-    .area-tag-filter {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-bottom: 32px;
-        cursor: default;
-        user-select: none;
-    }
-
-    .page-description {
-        margin-bottom: 3rem;
-    }
-
     .area-technology-entries-list {
         display: flex;
         flex-direction: column;

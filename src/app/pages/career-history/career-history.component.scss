@@ -28,7 +28,6 @@
                 .timeline-line {
                     display: none;
                     width: 2px;
-                    // height: 100%;
                     background-color: theme.$white-400;
                     position: absolute;
                     left: calc(24px - 50%);
@@ -85,13 +84,13 @@
                 }
             }
 
-            // &.career-item-type-POSITION {
-            //     .display-career-item-details {
-            //         border: 1px solid theme.$gray-200;
-            //         border-radius: 8px;
-            //         padding: 16px;
-            //     }
-            // }
+            &.career-item-type-Position {
+                .display-career-item-details {
+                    border: 1px solid theme.$gray-200;
+                    border-radius: 8px;
+                    padding: 16px;
+                }
+            }
 
             &:not(:last-child) {
                 .display-career-item-timeline {
