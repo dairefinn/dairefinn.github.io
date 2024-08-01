@@ -1,9 +1,12 @@
 @use 'theme';
 @use 'breakpoints';
 
-.container-component-skill {    
-    .display-skill-item-details {
-        .display-skill-item-title {
+.container-component-technology {    
+    .display-technology-item-details {
+        display: flex;
+        flex-direction: column;
+
+        .display-technology-item-title {
             display: flex;
             gap: 8px;
             align-items: center;
@@ -11,7 +14,25 @@
             font-size: 1.25rem;
         }
 
-        .display-skill-item-experience {
+        .toggle-show-experience {
+            align-self: flex-end;
+            font-size: .8rem;
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            
+            &:hover {
+                background-color: theme.$gray-300;
+            }
+
+            &.active {
+                background-color: theme.$gray-600;
+                cursor: default;
+            }
+        }
+
+        .display-technology-item-experience {
             display: flex;
             flex-direction: column;
 
@@ -30,15 +51,15 @@
                     margin-top: 0.5rem;
                 }
 
-                &:first-child {
-                    .display-experience-title {
-                        margin-top: 32px;
-                    }
-                }
+                // &:first-child {
+                //     .display-experience-title {
+                //         margin-top: 32px;
+                //     }
+                // }
             }
         }
 
-        .display-skill-item-tags {
+        .display-technology-item-tags {
             display: flex;
             flex-wrap: wrap;
             align-items: center;

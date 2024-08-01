@@ -20,8 +20,8 @@ export class CareerComponent {
       route: 'history'
     },
     {
-      label: 'Skills',
-      route: 'skills'
+      label: 'Technologies',
+      route: 'technologies'
     }
   ];
 

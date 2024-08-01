@@ -1,0 +1,21 @@
+<div class="container-component-technology">
+    <!-- <div class="area-tag-filter">
+        @for (tagItem of uniqueTagItems; track tagItem) {
+            <div class="wrapper-tag-item">
+                <app-tag [tag]="tagItem"></app-tag>
+            </div>
+        }
+    </div> -->
+    <!-- <button (click)="scrollToId('jira-github-issues-trello-atlas')">Test</button> -->
+    <p class="page-description">
+        I have experience with a wide range of technologies, and I am always looking to learn more. Below is a list of technologies that I have worked with in the past.
+    </p>
+
+    <div class="area-technology-entries-list">
+        @for (technologyItem of technologyEntries; track technologyItem) {
+            <div class="wrapper-technology-item" [id]="getTagIdForTechnology(technologyItem)" #wrapperTechnologyItem>
+                <app-technology [technology]="technologyItem"></app-technology>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,30 @@
+@use 'theme';
+@use 'breakpoints';
+
+.container-component-technology {
+    .area-tag-filter {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 32px;
+        cursor: default;
+        user-select: none;
+    }
+
+    .page-description {
+        margin-bottom: 3rem;
+    }
+
+    .area-technology-entries-list {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+
+        .wrapper-technology-item {
+            border-radius: 8px;
+            padding: 16px;
+            background-color: theme.$gray-400;
+            border: 1px solid theme.$gray-200;
+        }
+    }
+}

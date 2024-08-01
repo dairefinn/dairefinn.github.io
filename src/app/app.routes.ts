@@ -4,7 +4,7 @@ import { CareerComponent } from './pages/career/career.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { CareerHistoryComponent } from './pages/career-history/career-history.component';
-import { CareerSkillsComponent } from './pages/career-skills/career-skills.component';
+import { CareerTechnologyComponent } from './pages/career-technology/career-technology.component';
 
 export const routes: Routes = [
   {
@@ -37,8 +37,8 @@ export const routes: Routes = [
             component: CareerHistoryComponent
           },
           {
-            path: 'skills',
-            component: CareerSkillsComponent
+            path: 'technologies',
+            component: CareerTechnologyComponent
           }
         ]
       },
