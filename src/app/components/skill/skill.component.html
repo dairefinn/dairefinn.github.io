@@ -7,13 +7,13 @@
     
             <p [innerHTML]="skill.description"></p>
     
-            @if (skill.tags && skill.tags.length > 0) {
+            <!-- @if (skill.tags && skill.tags.length > 0) {
                 <div class="display-skill-item-tags">
                     @for (tagItem of skill.tags; track tagItem) {
                         <app-tag [tag]="tagItem"></app-tag>
                     }
                 </div>
-            }
+            } -->
     
             @if(showExperience) {
                 @if (skill.experience && skill.experience.length > 0) {
