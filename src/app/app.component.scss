@@ -1,17 +1,26 @@
+@use 'theme';
 @use 'breakpoints';
 
 .app-wrapper {
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+        "page"
+        "sidebar";
+
 
     .container-sidebar {
+        grid-area: sidebar;
         position: sticky;
-        top: 0;
+        bottom: 0;
         max-height: 100vh;
     }
 
     .container-page {
+        flex-grow: 1;
+        grid-area: page;
         padding: 32px;
         max-height: 100vh;
         overflow: auto;
@@ -27,5 +36,8 @@
 
     @include breakpoints.md {
         grid-template-columns: auto 1fr;
+        grid-template-rows: none;
+        grid-template-areas:
+            "sidebar page";
     }
 }

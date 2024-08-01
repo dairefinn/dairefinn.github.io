@@ -1,20 +1,24 @@
 @use 'theme';
+@use 'breakpoints';
 
 li {
     list-style-type: none;
-    margin-bottom: 8px;
 
     a {
+        padding: 16px;
         font-size: .8rem;
-        padding: 8px 16px;
-        border-radius: 8px;
         text-decoration: none;
         cursor: pointer;
         font-weight: 600;
-        display: grid;
-        grid-template-columns: auto 1fr auto;
+        display: flex;
+        flex-direction: column;
         gap: .75rem;
         align-items: center;
+        justify-content: center;
+
+        .navigation-link-title {
+            display: none;
+        }
         
         &:hover {
             background-color: theme.$gray-300;
@@ -26,6 +30,29 @@ li {
 
         & > .navigation-link-title {
             line-height: .8rem;
+        }
+    }
+
+    @include breakpoints.xs {
+        a {
+            .navigation-link-title {
+                display: block;
+            }
+        }
+    }
+
+    @include breakpoints.md {        
+        margin-bottom: 8px;
+
+        a {
+            padding: 8px 16px;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            border-radius: 8px;
+
+            .navigation-link-title {
+                display: block;
+            }
         }
     }
 }
