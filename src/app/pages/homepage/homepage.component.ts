@@ -9,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class HomepageComponent {
 
+  constructor() {
+    document.title = 'Daire Finn / Home';
+  }
+
 }

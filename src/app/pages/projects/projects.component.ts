@@ -17,4 +17,8 @@ export class ProjectsComponent {
 
   projectEntries: ProjectItem[] = projects;
 
+  constructor() {
+    document.title = 'Daire Finn / Projects';
+  }
+
 }

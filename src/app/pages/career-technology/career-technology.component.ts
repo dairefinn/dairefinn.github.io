@@ -17,4 +17,8 @@ export class CareerTechnologyComponent {
 
   technologyEntries: TechnologyItem[] = technologyEntries;
 
+  constructor() {
+    document.title = 'Daire Finn / Career / Technology';
+  }
+
 }

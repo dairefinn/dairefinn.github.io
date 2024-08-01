@@ -20,4 +20,8 @@ export class CareerHistoryComponent {
 
   careerEntries: CareerEntry[] = careerEntries;
 
+  constructor() {
+    document.title = 'Daire Finn / Career / History';
+  }
+
 }
