@@ -2,6 +2,15 @@
 @use 'breakpoints';
 
 .container-component-skill {
+    .area-tag-filter {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 32px;
+        cursor: default;
+        user-select: none;
+    }
+
     .area-skill-entries-list {
         display: flex;
         flex-direction: column;

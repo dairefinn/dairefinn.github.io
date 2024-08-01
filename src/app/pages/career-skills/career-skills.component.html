@@ -1,7 +1,18 @@
 <div class="container-component-skill">
+    <!-- <div class="area-tag-filter">
+        @for (tagItem of uniqueTagItems; track tagItem) {
+            <div class="wrapper-tag-item">
+                <app-tag [tag]="tagItem"></app-tag>
+            </div>
+        }
+    </div> -->
+    <!-- <button (click)="scrollToId('jira-github-issues-trello-atlas')">Test</button> -->
+
     <div class="area-skill-entries-list">
         @for (skillItem of skillEntries; track skillItem) {
-            <app-skill [skill]="skillItem"></app-skill>
+            <div class="wrapper-skill-item" [id]="getTagIdForSkill(skillItem)" #wrapperSkillItem>
+                <app-skill [skill]="skillItem"></app-skill>
+            </div>
         }
     </div>
 </div>

@@ -81,7 +81,19 @@ export const skillEntries: SkillItem[] = [
             //     type: SkillExperienceType.EDUCATION
             // }
         ],
-        tags: [Tag.FRONT_END, Tag.WEB_DEV]
+        tags: [Tag.FRONT_END, Tag.WEB_DEV, Tag.DESIGN, Tag.UI_UX]
+    },
+    {
+        title: 'Java, Spring Boot',
+        description: 'I have a good understanding of Java and have used Spring Boot for a while now.',
+        experience: [
+            {
+                title: 'Frankli',
+                type: SkillExperienceType.PROFESSIONAL,
+                description: 'The back-end of the application was developed in Java using Spring Boot and Maven. I have added plenty of features to the back-end and have a good understanding of the architecture.'
+            }
+        ],
+        tags: [Tag.BACK_END, Tag.LANGUAGE]
     },
     {
         title: 'MySQL, SQL Server',
@@ -234,4 +246,21 @@ export const skillEntries: SkillItem[] = [
         ],
         tags: [Tag.PROJECT_MANAGEMENT]
     },
+    {
+        title: 'Figma, Adobe XD',
+        description: 'I started off using Adobe XD but have since moved to Figma because I think it\'s far superior.',
+        experience: [
+            {
+                title: 'Frankli',
+                type: SkillExperienceType.EDUCATION,
+                description: 'I used XD for designs initially but later moved to Figma. I created a standard library of colours, components, and styles so that we could quickly mockup new features at a high fidelity.'
+            },
+            {
+                title: 'College projects',
+                type: SkillExperienceType.PERSONAL,
+                description: 'I used XD for some college projects, mainly a large group project that we had to do in third year.'
+            }
+        ],
+        tags: [Tag.LANGUAGE, Tag.UI_UX]
+    }
 ]

@@ -13,5 +13,7 @@ export enum Tag {
     FRAMEWORK = 'Framework',
     PROJECT_MANAGEMENT = 'Project management',
     SOURCE_CONTROL = 'Source control',
-    CLOUD_INFRASTRUCTURE = 'Cloud infrastructure'
+    CLOUD_INFRASTRUCTURE = 'Cloud infrastructure',
+    DESIGN = 'Design',
+    UI_UX = 'UI/UX',
 }
