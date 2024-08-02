@@ -123,7 +123,7 @@ export const careerEntries: CareerEntry[] = [
     title: 'Senior Software Engineer',
     company: 'Frankli',
     location: 'Remote',
-    date: new Date(2023, 11, 5),
+    date: new Date(2023, 10, 5),
     description: `
         I received a promotion to Senior Software Engineer but since I was already managing all the technical aspects of the company, my responsibilities didn't change much.
         <br/><br/>
