@@ -1,33 +1,35 @@
 <div class="container-component-project">
-    <div class="area-project-entries-list">
-        @for (projectItem of projectEntries; track projectItem) {
-            <div class="display-project-item">
-                <div class="display-project-item-date">
-                    <span>{{projectItem.date | date: 'd MMM yyyy'}}</span>
-                </div>
-                <div class="display-project-item-details">
-                    <div class="display-project-item-title">
-                        <span>{{projectItem.title}}</span>
+    <app-page-wrapper>
+        <div class="area-project-entries-list">
+            @for (projectItem of projectEntries; track projectItem) {
+                <div class="display-project-item print-whole">
+                    <div class="display-project-item-date">
+                        <span>{{projectItem.date | date: 'd MMM yyyy'}}</span>
                     </div>
-
-                    @if (projectItem.link) {
-                        <div class="display-project-item-url">
-                            <span class="fa fa-fw fa-link"></span>
-                            <a [href]="projectItem.link" target="_blank" rel="noopener noreferrer">{{projectItem.link}}</a>
+                    <div class="display-project-item-details">
+                        <div class="display-project-item-title">
+                            <span>{{projectItem.title}}</span>
                         </div>
-                    }
-
-                    <p [innerHTML]="projectItem.description"></p>
-
-                    @if (projectItem.tags && projectItem.tags.length > 0) {
-                        <div class="display-project-item-tags">
-                            @for (tagItem of projectItem.tags; track tagItem) {
-                                <app-tag [tag]="tagItem"></app-tag>
-                            }
-                        </div>
-                    }
+    
+                        @if (projectItem.link) {
+                            <div class="display-project-item-url">
+                                <span class="fa fa-fw fa-link"></span>
+                                <a [href]="projectItem.link" target="_blank" rel="noopener noreferrer">{{projectItem.link}}</a>
+                            </div>
+                        }
+    
+                        <p [innerHTML]="projectItem.description"></p>
+    
+                        @if (projectItem.tags && projectItem.tags.length > 0) {
+                            <div class="display-project-item-tags">
+                                @for (tagItem of projectItem.tags; track tagItem) {
+                                    <app-tag [tag]="tagItem"></app-tag>
+                                }
+                            </div>
+                        }
+                    </div>
                 </div>
-            </div>
-        }
-    </div>
+            }
+        </div>
+    </app-page-wrapper>
 </div>

@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { PageWrapperComponent } from '../../components/page-wrapper/page-wrapper.component';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [],
+  imports: [
+    PageWrapperComponent
+  ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })

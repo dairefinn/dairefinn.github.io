@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CareerEntryType, CareerEntry, careerEntries } from '../../../data/career';
 import { CommonModule, DatePipe } from '@angular/common';
 import { CardComponent } from '../../components/card/card.component';
+import { PageWrapperComponent } from '../../components/page-wrapper/page-wrapper.component';
 
 @Component({
   selector: 'app-career-history',
@@ -9,7 +10,8 @@ import { CardComponent } from '../../components/card/card.component';
   imports: [
     DatePipe,
     CommonModule,
-    CardComponent
+    CardComponent,
+    PageWrapperComponent
   ],
   templateUrl: './career-history.component.html',
   styleUrl: './career-history.component.scss'

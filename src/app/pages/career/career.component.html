@@ -1,6 +1,8 @@
 <div class="container-component-career">
-    <div class="area-navigation-tabs">
-        <app-navigation-tabs [options]="optionsNavigation"></app-navigation-tabs>
-    </div>
-    <router-outlet/>
+    <app-page-wrapper>
+        <div class="area-navigation-tabs">
+            <app-navigation-tabs [options]="optionsNavigation"></app-navigation-tabs>
+        </div>
+        <router-outlet/>
+    </app-page-wrapper>
 </div>
