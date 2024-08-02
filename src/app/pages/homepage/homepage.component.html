@@ -1,24 +1,50 @@
 <div class="container-component-homepage">
-  <div class="side-by-side side-by-side-big-right">
-    <div class="headshot-container">
-      <img src="assets/images/headshot.webp" alt="A headshot of me" class="img-rounded headshot" />
-    </div>
-  
-    <div class="main-description">
-      <h1>Hey, I'm Daire</h1>
-      <p>
-        I'm a software engineer based in Mayo, Ireland. I'm currently working at <a href="https://www.getfrankli.com" target="_blank">Frankli</a> as a Senior Software Engineer.
-      </p>
-      <p>
-        Primarily, I'm a full-stack web developer but sometimes I like to explore other areas of software development.
-      </p>
+  <div class="homepage-area area-introduction">
+    <div class="side-by-side side-by-side-big-right">
+      <div class="headshot-container">
+        <img src="assets/images/headshot.webp" alt="A headshot of me" class="img-rounded img-full-width" />
+      </div>
+    
+      <div class="main-description">
+        <h1>Hey, I'm Daire</h1>
+        <p>
+          I'm a software engineer based in Mayo, Ireland. I'm currently working at <a href="https://www.getfrankli.com" target="_blank">Frankli</a> as a Senior Software Engineer.
+        </p>
+        <p>
+          I drink far too much tea and I won't be able to talk to you if there's a dog in the room.
+        </p>
+      </div>
     </div>
   </div>
 
-  <div class="area-spotify-onrepeat">
-    <p>
-      Here's what I've been listening to lately:
-    </p>
-    <iframe class="iframe-spotify-playlist" src="https://open.spotify.com/embed/playlist/37i9dQZF1Epwk7SuBT7N2r?theme=0" width="100%" height="480" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  <h2>My interests</h2>
+  <div class="homepage-area area-music">
+    <app-card>
+      <h3>Music</h3>
+      <p>
+        There is rarely a moment when I'm not listening to something. I have a wide range of tastes and I'm always on the lookout for new music.
+        <br/><br/>
+        Here's what I've been listening to lately:
+      </p>
+      <!-- <iframe class="iframe-spotify-playlist" src="https://open.spotify.com/embed/playlist/37i9dQZF1Epwk7SuBT7N2r?theme=0" width="100%" height="480" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> -->
+      <iframe class="iframe-spotify-playlist" src="https://open.spotify.com/embed/playlist/37i9dQZF1Epwk7SuBT7N2r?theme=0" width="100%" height="758" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </app-card>
+  </div>
+
+  <div class="homepage-area area-video-games">
+    <app-card>
+      <h3>Video games</h3>
+      <p>
+         Playing games is my favourite hobby - I've been playing video games for as long as I can remember. I play most of my games on PC but have owned a variety of consoles over the year due to some games being exclusive to certain platforms.
+         <br/><br/>
+         I've had my Steam account since 2005 and have amassed a collection of over 1500 games since then. My favourite game is Mirror's Edge.
+         <br/><br/>
+         The process of designing, developing and releasing a video game fascinates me. I have a collection of video game design books and have tried a small amount of game development myself.
+         <br/><br/>
+         Myself and my dad worked together to put together a sim-racing setup which we use to play racing games.
+         <br/><br/>
+         <img src="assets/images/simracing-rig.webp" alt="My sim-racing setup" class="img-rounded img-full-width" />
+      </p>
+    </app-card>
   </div>
 </div>
