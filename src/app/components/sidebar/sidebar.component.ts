@@ -32,6 +32,12 @@ export class SidebarComponent {
       icon: 'fa-brands fa-fw fa-spotify',
       route: 'https://open.spotify.com/user/dman355/',
       isExternal: true
+    },
+    {
+      title: 'Instagram',
+      icon: 'fa-brands fa-fw fa-instagram',
+      route: 'https://www.instagram.com/dairefinn/',
+      isExternal: true
     }
   ];
 

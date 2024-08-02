@@ -46,6 +46,7 @@
     }
 
     @include breakpoints.md {
+        border-top: none;
         border-right: 1px solid theme.$gray-200;
         width: 200px;
         height: 100%;
