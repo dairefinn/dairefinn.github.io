@@ -45,44 +45,82 @@ export const projects: ProjectItem[] = [
     },
     {
         title: 'Godot game',
-        description: `I\'ve always wanted to dabble in game development as a hobby because the field interests me. I decided to try out Godot because it\'s free and open source. Currently, this is a 3D movement shooter style game but it could change. I\'m not sure if I\'ll ever finish this but I\'m having fun with it so far and I find it interesting how different game dev is to my primary field of web dev.`,
+        description: `
+            I\'ve always wanted to dabble in game development as a hobby because the field interests me. I decided to try out Godot because it\'s free and open source.
+            <br/><br/>
+            Currently, this is a 3D movement shooter style game but it could change. I\'m not sure if I\'ll ever finish this but I\'m having fun with it so far and I find it interesting how different game dev is to my primary field of web dev.
+            `,
         tags: [Tag.GAME_DEV],
         link: 'https://github.com/dairefinn/daires-game',
         date: new Date('2024-01-02')
     },
     {
         title: 'Discord bot',
-        description: `I wanted to see how the Discord API works and I had some time to kill while I was waiting for a game to download so I made this. When a user posts a certain command in chat, the bot will join the voice channel they are in and play a preset sound.`,
+        description: `
+            I had some time to kill while I was waiting for a game to download so I decided to check out how the Discord API works.
+            <br/><br/>
+            When a user posts a certain command in chat, the bot will join the voice channel they are in and play a preset sound.
+            `,
         tags: [Tag.WEB_DEV],
         link: 'https://github.com/dairefinn/discord-bot',
         date: new Date('2023-10-26')
     },
     {
-        title: 'RadarrSync',
-        description: `A modified fork of the RadarrSync project which syncs movies between two Radarr instances. This has almost 700k downloads as of writing.`,
-        tags: [Tag.CONTAINERS, Tag.SOURCE_CONTROL],
-        link: 'https://github.com/dairefinn/RadarrSync',
-        date: new Date('2019-02-17')
-    },
-    {
         title: 'Geforce Now Searcher',
-        description: `I was playing games using NVidia\'s Geforce Now service for a while. You can link your steam account and play your games on a dedicated VM with a high-end GPU. The problem here was that not all of the games in my Steam library were available on the service and searching through the games that were available was a painful experience because you couldn\'t tell which ones you did and did not own. This utility would query data from their site and your library and compare the two.`,
+        description: `
+            After a surgery, I was finding it difficult to sit at my computer so I resorted to streaming games to my TV via Nvidia's GeForce NOW service - which allows you to play games you own on a high-end VM with a dedicated GPU.
+            <br/><br/>
+            Unfortunately, their games list would show all available games on the service regardless of whether you owned them or not. This made it difficult to find games I could play without having to compare with my Steam library manually.
+            <br/><br/>
+            I decided to make a web app that would query both the GeForce NOW API and the Steam API to show only the games I owned that were available on the service. The Steam ID can be changed to work for other users too.
+            <br/><br/>
+            This was extremely useful at the time but I haven't used the service since I recovered and I'm sure that their filtering has improved since then.
+            `,
         tags: [Tag.WEB_DEV],
         link: 'https://github.com/dairefinn/geforce-now-searcher',
         date: new Date('2021-12-05')
     },
     {
+        title: 'Slope v2',
+        description: `
+            One of my most played games is Garry\'s Mod. This is a sandbox game where people can create their own game modes and maps.
+            <br/><br/>
+            I used to enjoy playing one called \'Slope\' with my friends but the server hosting it went down which led me to attempt making my own version of it.
+            <br/><br/>
+            The sequel to Garry\'s Mod is in development so there's probably not much point in continuing this project but it was fun learning about lua and the source engine works.
+            <br/><br/>
+            I have acquired access to the sequel\'s developer preview so I'd like to continue this project for that game instead.
+            `,
+        tags: [Tag.GAME_DEV],
+        link: 'https://github.com/dairefinn/slope_v2',
+        date: new Date('2020-09-30')
+    },
+    {
         title: 'Workspace function',
-        description: `I was using Visual Studio Code a lot for multiple different projects and programming languages. I didn\'t want to have to install all the extensions for every language at once because it would be slow. To solve this, code offers workspaces but it can be annoying to transition between the two. As a result, I made this utility to easily open a saved workspace via the terminal.`,
+        description: `
+            I often jump between multiple projects that use different programming languages. I wanted use an single editor for all of them just for simplicity. Visual Studio Code seemed like the best choice because it has a lot of extensions which add support for different languages.
+            <br/><br/>
+            The issue I had noticed was that the editor would slow down if I had too many extensions installed. Visual Studio Code offers workspaces which can be used to load only the extensions you need for a specific project but it can be annoying to transition between the two.
+            <br/><br/>
+            As a result, I made this utility to easily open a saved workspace via the terminal. It's a simple bash script that opens the workspace file based on the name you give it.
+            <br/><br/>
+            I use this almost every day and it has saved me a lot of time. As an added bonus, I have all my workspaces saved in a git repository so I can easily add them to a new machine.
+            `,
         tags: [Tag.SHELL],
         link: 'https://github.com/dairefinn/workspace-function',
         date: new Date('2020-05-19')
     },
     {
-        title: 'Slope v2',
-        description: `One of my most played games is Garry\'s Mod. This is a sandbox game where people can create their own game modes and maps. I used to enjoy playing one called \'Slope\' with my friends but the server hosting it went down. I decided to attempt making my own version of it. I never quite finished it (and the sequel has been annouced so there\'s probably not much point) but I learned a lot about lua and the source engine in the process.`,
-        tags: [Tag.GAME_DEV],
-        link: 'https://github.com/dairefinn/slope_v2',
-        date: new Date('2020-09-30')
+        title: 'RadarrSync',
+        description: `
+            RadarrSync is a utility that syncs your Radarr library with another instance of Radarr. This is useful if you have two instances of Radarr running on different servers and you want to keep the libraries in sync.
+            <br/><br/>
+            Someone I know was having trouble getting the original RadarrSync project to work in docker so I decided to fork it and make some changes to get it working for them.
+            <br/><br/>
+            My version is available publicly on docker hub and has almost 700k downloads as of writing.
+            `,
+        tags: [Tag.CONTAINERS, Tag.SOURCE_CONTROL],
+        link: 'https://github.com/dairefinn/RadarrSync',
+        date: new Date('2019-02-17')
     },
 ].sort((a, b) => b.date?.getTime() - a.date?.getTime());

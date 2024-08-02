@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CareerComponent } from './career.component';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 
 describe('CareerComponent', () => {
   let component: CareerComponent;
@@ -8,7 +9,13 @@ describe('CareerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CareerComponent]
+      imports: [
+        CareerComponent,
+        RouterModule.forChild([])
+      ],
+      providers: [
+        { provide: ActivatedRoute, useValue: { } }
+      ]
     })
     .compileComponents();
     
