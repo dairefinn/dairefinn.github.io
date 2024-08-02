@@ -1,13 +1,21 @@
 .container-component-homepage {
-    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 
     .headshot-container {
         max-width: 500px;
         justify-self: center;
-        padding: 0 16px;
+        // padding: 0 16px;
 
         .headshot {
             width: 100%;
+        }
+    }
+
+    .area-spotify-onrepeat {
+        .iframe-spotify-playlist {
+            border-radius: 8px;
         }
     }
 }
