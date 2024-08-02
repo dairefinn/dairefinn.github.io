@@ -27,13 +27,15 @@
     }
 
     @media print {
+        display: block;
+
         .container-sidebar {
             display: none;
         }
 
         .container-page {
             padding-top: 32px;
-            overflow: visible;
+            padding-bottom: 32px;
         }
     }
 }
