@@ -43,7 +43,7 @@ export class SidebarComponent {
     },
     {
       title: 'Projects',
-      icon: 'fa fa-fw fa-folder-open',
+      icon: 'far fa-fw fa-folder-open',
       route: '/projects'
     },
     {
