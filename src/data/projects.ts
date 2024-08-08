@@ -10,6 +10,19 @@ export type ProjectItem = {
 
 export const projects: ProjectItem[] = [
     {
+        title: 'Batch script to toggle between Wired and Wireless connection',
+        description: `
+            My mobile hotspot is much faster than my wired connection but my wired connection is much more reliable so I usually use the hotspot to download large files and then switch back to the wired connection for everything else.
+            <br/><br/>
+            The problem is that I cannot rely solely on enabling wifi and disabling it as programs already using the wired adapter will continue using it.
+            <br/><br/>
+            This script is used to quickly toggle between the two connections, ensuring that all programs switch over to the new connection.
+            `,
+        tags: [Tag.SHELL, Tag.NETWORKING],
+        link: 'https://github.com/dairefinn/windows-script-wlan-wifi-toggle',
+        date: new Date('2024-08-08')
+    },
+    {
         title: 'This website',
         description: `
             This site is hosted through Github Pages and is built using Angular.
