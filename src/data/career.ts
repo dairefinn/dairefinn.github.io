@@ -9,12 +9,13 @@ export type CareerEntry = {
   title: string;
   description?: string;
   location?: string;
-  date: Date;
+  startDate: Date;
+  endDate?: Date | null;
   company?: string;
   link?: string;
 };
 
-export const careerEntries: CareerEntry[] = [
+export const careerEntriesEvents: CareerEntry[] = [
   {
     type: CareerEntryType.EVENT,
     title: 'Started BSc Honours in Computing',
@@ -28,58 +29,8 @@ export const careerEntries: CareerEntry[] = [
         <br/><br/>
         More importantly, I met many new friends who I regularly discuss tech with and bounce ideas off of to this day.
         `,
-    date: new Date(2016, 8, 1),
-  },
-  {
-    type: CareerEntryType.POSITION,
-    title: 'Work Placement',
-    description: `
-        My college course required a few weeks of work placement in our third year, during which I managed to secure a position as front-end developer at Frankli, a performance management software company.
-        <br/><br/>
-        The first project I worked on was to implement a new sign-up workflow. I learned a lot about browser compatibility from this project because we needed to support older versions of Internet Explorer.
-        `,
-    company: 'Frankli',
-    location: 'Sligo, Ireland',
-    date: new Date(2019, 4, 1),
-    link: 'https://getfrankli.com',
-  },
-  {
-    type: CareerEntryType.POSITION,
-    title: 'Software Engineer (Part-time)',
-    description: `
-        I opted to stay on part-time while I finished my degree and I quickly became the point of contact for all things front-end.
-        <br/><br/>
-        I was responsible for designing (in Adobe XD and later Figma) as well as maintaining and improving the front-end codebase and of course fixing bugs.
-        <br/><br/>
-        I created a standardized design library which helped to speed up the design process and ensure consistency across multiple developers.
-    `,
-    company: 'Frankli',
-    location: 'Remote',
-    date: new Date(2019, 6, 1),
-    link: 'https://getfrankli.com',
-  },
-  {
-    type: CareerEntryType.CERTIFICATION,
-    title: 'Graduated with First Class Honours',
-    location: 'ATU Sligo',
-    date: new Date(2020, 4, 1),
-  },
-  {
-    type: CareerEntryType.POSITION,
-    title: 'Software Engineer',
-    company: 'Frankli',
-    location: 'Sligo, Ireland',
-    date: new Date(2020, 4, 1, 1),
-    description: `
-        I was offered a full-time position as a software engineer after I graduated.
-        <br/><br/>
-        I resumed working on the front-end and design side of things but eventually started taking on back-end work too.
-        <br/><br/>
-        At this point, I was building my own features start to finish and was responsible for the entire process of designing, building, testing, and deploying any features I was making.
-        <br/><br/>
-        I also worked on a few projects that involved integrating with third-party APIs (eg. Zendesk, Microsoft Teams, Merge.dev).
-        `,
-    link: 'https://getfrankli.com',
+    startDate: new Date(2016, 8, 1),
+    endDate: new Date(2020, 4, 1),
   },
   {
     type: CareerEntryType.EVENT,
@@ -89,7 +40,8 @@ export const careerEntries: CareerEntry[] = [
         <br/><br/>
         We had grown to a team of 5 developers so to help keep everything coordinated I took the lead on utilizing the full Atlassian suite to manage our projects.
         `,
-    date: new Date(2021, 6, 1),
+    startDate: new Date(2021, 6, 1),
+    endDate: null
   },
   {
     type: CareerEntryType.EVENT,
@@ -103,7 +55,8 @@ export const careerEntries: CareerEntry[] = [
         <br/><br/>
         One project I enjoyed was overhauling our pipelines to be faster and more reliable. I achieved this by splitting them into more manageable steps, running steps in parallel, utilizing a cache and creating a custom Docker image for our build environment.
         `,
-    date: new Date(2022, 1, 1),
+    startDate: new Date(2022, 1, 1),
+    endDate: null
   },
   {
     type: CareerEntryType.EVENT,
@@ -116,28 +69,95 @@ export const careerEntries: CareerEntry[] = [
         <br/><br/>
         I also took on a mentoring role for our graduate developer who had elected to stay on part-time.
         `,
-    date: new Date(2023, 7, 10),
+    startDate: new Date(2023, 7, 10),
+    endDate: null
+  },
+].sort((a, b) => b.startDate?.getTime() - a.startDate?.getTime());
+
+export const careerEntriesPositions: CareerEntry[] = [
+  {
+    type: CareerEntryType.POSITION,
+    title: 'Work Placement',
+    description: `
+        My college course required a few weeks of work placement in our third year, during which I managed to secure a position as front-end developer at Frankli, a performance management software company.
+        <br/><br/>
+        The first project I worked on was to implement a new sign-up workflow. I learned a lot about browser compatibility from this project because we needed to support older versions of Internet Explorer.
+        `,
+    company: 'Frankli',
+    location: 'Sligo',
+    startDate: new Date(2019, 4, 1),
+    endDate: new Date(2019, 6, 1),
+    link: 'https://getfrankli.com',
   },
   {
     type: CareerEntryType.POSITION,
-    title: 'Senior Software Engineer',
+    title: 'Software Developer (Part-time)',
+    description: `
+        I opted to stay on part-time while I finished my degree and I quickly became the point of contact for all things front-end.
+        <br/><br/>
+        I was responsible for designing (in Adobe XD and later Figma) as well as maintaining and improving the front-end codebase and of course fixing bugs.
+        <br/><br/>
+        I created a standardized design library which helped to speed up the design process and ensure consistency across multiple developers.
+    `,
     company: 'Frankli',
     location: 'Remote',
-    date: new Date(2023, 10, 5),
+    startDate: new Date(2019, 6, 1),
+    endDate: new Date(2020, 4, 1),
+    link: 'https://getfrankli.com',
+  },
+  {
+    type: CareerEntryType.POSITION,
+    title: 'Software Developer',
+    company: 'Frankli',
+    location: 'Sligo',
+    startDate: new Date(2020, 4, 1, 1),
+    endDate: new Date(2023, 10, 5),
     description: `
-        I received a promotion to Senior Software Engineer but since I was already managing all the technical aspects of the company, my responsibilities didn't change much.
+        I was offered a full-time position as a software developer after I graduated.
         <br/><br/>
-        We managed to keep things running smoothly with just the three of us and we even managed to secure some new clients.
+        I resumed working on the front-end and design side of things but eventually started taking on back-end work too.
+        <br/><br/>
+        At this point, I was building my own features start to finish and was responsible for the entire process of designing, building, testing, and deploying any features I was making.
+        <br/><br/>
+        I also worked on a few projects that involved integrating with third-party APIs (eg. Zendesk, Microsoft Teams, Merge.dev).
         `,
     link: 'https://getfrankli.com',
   },
   {
-    type: CareerEntryType.EVENT,
-    title: 'Present day',
+    type: CareerEntryType.POSITION,
+    title: 'Senior Software Developer',
+    company: 'Frankli',
+    location: 'Remote',
+    startDate: new Date(2023, 10, 5),
+    endDate: undefined,
     description: `
-        I am still working at Frankli as a Senior Software Engineer.<br/>
-        We are busy maintaining our existing platform and are always working on new features.
+        I received a promotion to Senior Software Developer but since I was already managing all the technical aspects of the company, my responsibilities didn't change much.
+        <br/><br/>
+        We managed to keep things running smoothly with just the three of us and we even managed to secure some new clients.
         `,
-    date: new Date(),
+    link: 'https://getfrankli.com',
   }
-].sort((a, b) => b.date?.getTime() - a.date?.getTime());
+].sort((a, b) => b.startDate?.getTime() - a.startDate?.getTime());
+
+export const careerEntriesCertifications: CareerEntry[] = [
+  {
+    type: CareerEntryType.CERTIFICATION,
+    title: 'BSc in Computing (Honours)',
+    description: `
+        I graduated with a first-class honours. I had a GPA of 78%
+        <br/>
+        Technologies I learned about during my degree include C#, HTML, CSS, JavaScript, Angular, SQL, Shell scripting, Git.
+        `,
+    location: 'ATU Sligo',
+    // startDate: new Date(2016, 8, 1),
+    // endDate: new Date(2020, 4, 1)
+    startDate: new Date(2020, 4, 1),
+    endDate: null
+  },
+].sort((a, b) => b.startDate?.getTime() - a.startDate?.getTime());
+
+export const careerEntries: CareerEntry[] = [
+  ...careerEntriesEvents,
+  ...careerEntriesPositions,
+  ...careerEntriesCertifications
+].sort((a, b) => b.startDate?.getTime() - a.startDate?.getTime());

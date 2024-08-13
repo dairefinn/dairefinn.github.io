@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { NavigationTabOption, NavigationTabsComponent } from '../../components/navigation-tabs/navigation-tabs.component';
 import { PageWrapperComponent } from '../../components/page-wrapper/page-wrapper.component';
 
@@ -17,6 +17,10 @@ import { PageWrapperComponent } from '../../components/page-wrapper/page-wrapper
 export class CareerComponent {
 
   optionsNavigation: NavigationTabOption[] = [
+    // {
+    //   label: 'Overview',
+    //   route: 'overview'
+    // },
     {
       label: 'History',
       route: 'history'
@@ -27,4 +31,9 @@ export class CareerComponent {
     }
   ];
 
+  constructor(private router: Router) {}
+
+  get isOnPageCV(): boolean {
+    return this.router.url.endsWith('/overview');
+  }
 }

@@ -4,8 +4,9 @@ export type ProjectItem = {
     title: string;
     description: string;
     tags: Tag[];
-    date?: Date;
+    startDate?: Date;
     link?: string;
+    isFeatured?: boolean;
 }
 
 export const projects: ProjectItem[] = [
@@ -20,7 +21,7 @@ export const projects: ProjectItem[] = [
             `,
         tags: [Tag.SHELL, Tag.NETWORKING],
         link: 'https://github.com/dairefinn/windows-script-wlan-wifi-toggle',
-        date: new Date('2024-08-08')
+        startDate: new Date('2024-08-08')
     },
     {
         title: 'This website',
@@ -37,7 +38,7 @@ export const projects: ProjectItem[] = [
             `,
         tags: [Tag.WEB_DEV, Tag.DEV_OPS],
         link: 'https://github.com/dairefinn/dairefinn.github.io',
-        date: new Date('2024-07-29')
+        startDate: new Date('2024-07-29')
     },
     {
         title: 'Reverse proxy over TailScale',
@@ -54,7 +55,7 @@ export const projects: ProjectItem[] = [
             `,
         tags: [Tag.NETWORKING],
         link: undefined,
-        date: new Date('2024-07-29')
+        startDate: new Date('2024-07-29')
     },
     {
         title: 'Godot game',
@@ -65,7 +66,7 @@ export const projects: ProjectItem[] = [
             `,
         tags: [Tag.GAME_DEV],
         link: 'https://github.com/dairefinn/daires-game',
-        date: new Date('2024-01-02')
+        startDate: new Date('2024-01-02')
     },
     {
         title: 'Discord bot',
@@ -76,7 +77,7 @@ export const projects: ProjectItem[] = [
             `,
         tags: [Tag.WEB_DEV],
         link: 'https://github.com/dairefinn/discord-bot',
-        date: new Date('2023-10-26')
+        startDate: new Date('2023-10-26')
     },
     {
         title: 'Geforce Now Searcher',
@@ -91,7 +92,7 @@ export const projects: ProjectItem[] = [
             `,
         tags: [Tag.WEB_DEV],
         link: 'https://github.com/dairefinn/geforce-now-searcher',
-        date: new Date('2021-12-05')
+        startDate: new Date('2021-12-05')
     },
     {
         title: 'Slope v2',
@@ -106,7 +107,7 @@ export const projects: ProjectItem[] = [
             `,
         tags: [Tag.GAME_DEV],
         link: 'https://github.com/dairefinn/slope_v2',
-        date: new Date('2020-09-30')
+        startDate: new Date('2020-09-30')
     },
     {
         title: 'Workspace function',
@@ -121,7 +122,7 @@ export const projects: ProjectItem[] = [
             `,
         tags: [Tag.SHELL],
         link: 'https://github.com/dairefinn/workspace-function',
-        date: new Date('2020-05-19')
+        startDate: new Date('2020-05-19')
     },
     {
         title: 'RadarrSync',
@@ -134,6 +135,6 @@ export const projects: ProjectItem[] = [
             `,
         tags: [Tag.CONTAINERS, Tag.SOURCE_CONTROL],
         link: 'https://github.com/dairefinn/RadarrSync',
-        date: new Date('2019-02-17')
+        startDate: new Date('2019-02-17')
     },
-].sort((a, b) => b.date?.getTime() - a.date?.getTime());
+].sort((a, b) => b.startDate?.getTime() - a.startDate?.getTime());

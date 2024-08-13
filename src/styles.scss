@@ -22,4 +22,8 @@ body {
   a {
     color: theme.$white-300;
   }
+
+  .clickable {
+    cursor: pointer;
+  }
 }

@@ -1,7 +1,9 @@
 <div class="container-component-career">
     <app-page-wrapper>
-        <div class="area-navigation-tabs">
-            <app-navigation-tabs [options]="optionsNavigation"></app-navigation-tabs>
+        <div class="area-navigation-tabs" [class.print-hidden]="isOnPageCV">
+            <div class="area-navigation-tabs-inner">
+                <app-navigation-tabs [options]="optionsNavigation"></app-navigation-tabs>
+            </div>
         </div>
         <router-outlet/>
     </app-page-wrapper>

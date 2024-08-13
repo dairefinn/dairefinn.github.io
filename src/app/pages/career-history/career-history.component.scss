@@ -34,18 +34,13 @@
                     transform: translateX(-50%);
                 }
             }
-    
-                
-            .display-career-item-date-desktop,
-            .display-career-item-date-mobile {
+
+            .display-career-item-date-desktop {
                 font-size: 0.8rem;
                 color: theme.$white-300;
                 height: 2rem;
                 align-items: center;
                 text-wrap: nowrap;
-            }
-    
-            .display-career-item-date-desktop {
                 font-size: 0.8rem;
                 color: theme.$white-300;
                 height: 2rem;
@@ -59,27 +54,6 @@
 
             .display-career-item-date-mobile {
                 display: flex;
-            }
-    
-            .display-career-item-details {
-                display: flex;
-                flex-direction: column;
-
-                .display-career-item-title {
-                    display: flex;
-                    gap: 16px;
-                    align-items: center;
-                    font-weight: 600;
-                    font-size: 1.25rem;
-                }
-    
-                .display-career-item-where {
-                    padding-top: 8px;
-                    display: flex;
-                    gap: 8px;
-                    align-items: center;
-                    color: theme.$white-300;
-                }
             }
 
             &:not(:last-child) {
@@ -96,9 +70,19 @@
                 .display-career-item-date-desktop {
                     display: flex;
                 }
+            }
+        }
+    }
 
-                .display-career-item-date-mobile {
-                    display: none;
+    &.career-history-shortened {
+        .area-career-entries-list {
+            gap: 16px;
+
+            .display-career-item {
+                .display-career-item-timeline {
+                    .timeline-line {
+                        bottom: -32px;
+                    }
                 }
             }
         }

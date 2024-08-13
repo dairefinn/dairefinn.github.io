@@ -1,0 +1,43 @@
+@if (careerEntry !== undefined) {
+    <div class="container-component-career-entry">
+        <div class="display-career-item-title">
+            @switch (careerEntry.type) {
+                @case (eCareerEntryType.EVENT) {
+                    <span class="fa fa-fw fa-calendar" [title]="eCareerEntryType.EVENT"></span>
+                }
+                @case (eCareerEntryType.POSITION) {
+                    <span class="fa fa-fw fa-briefcase" [title]="eCareerEntryType.POSITION"></span>
+                }
+                @case (eCareerEntryType.CERTIFICATION) {
+                    <span class="fa fa-fw fa-certificate" [title]="eCareerEntryType.CERTIFICATION"></span>
+                }
+            }
+            <span>&nbsp;{{careerEntry.title}}</span>
+            @if (careerEntry.company) {
+                <span>,&nbsp;</span>
+                <span class="display-career-item-company">
+                    <span>{{careerEntry.company}}</span>
+                </span>
+            }
+            @if (careerEntry.location) {
+                <span>,&nbsp;</span>
+                <div class="display-career-item-location">
+                    <span>{{careerEntry.location}}</span>
+                </div>
+            }
+        </div>
+        <div class="display-career-item-date">
+            <span>{{careerEntry.startDate | date: 'MMM yyyy'}}</span>
+            @if(careerEntry.endDate === undefined) {
+                <span> - Present</span>
+            }
+            @else if(careerEntry.endDate === null) {
+                <!-- Doesn't have an end date -->
+            }
+            @else {
+                <span> - {{careerEntry.endDate | date: 'MMM yyyy'}}</span>
+            }
+        </div>
+        <p [innerHTML]="careerEntry.description"></p>
+    </div>
+}

@@ -5,6 +5,7 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { CareerHistoryComponent } from './pages/career-history/career-history.component';
 import { CareerTechnologyComponent } from './pages/career-technology/career-technology.component';
+import { CareerCvComponent } from './pages/career-cv/career-cv.component';
 
 export const routes: Routes = [
   {
@@ -32,6 +33,10 @@ export const routes: Routes = [
             redirectTo: 'history',
             pathMatch: 'full',
           },
+          // {
+          //   path: 'overview',
+          //   component: CareerCvComponent
+          // },
           {
             path: 'history',
             component: CareerHistoryComponent
@@ -48,4 +53,8 @@ export const routes: Routes = [
       },
     ],
   },
+  {
+    path: '**',
+    redirectTo: 'home',
+  }
 ];

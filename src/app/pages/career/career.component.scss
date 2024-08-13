@@ -3,9 +3,11 @@
 
 .container-component-career {
     .area-navigation-tabs {
-        display: flex;
-        justify-content: center;
-        padding-bottom: 32px;
-        width: 100%;
+        .area-navigation-tabs-inner {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 32px;
+            width: 100%;
+        }
     }
 }

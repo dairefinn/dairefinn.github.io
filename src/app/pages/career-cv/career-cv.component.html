@@ -1,0 +1,69 @@
+<div class="container-component-career-cv">
+  <div class="area-main-details">
+    <div class="side-by-side side-by-side-xlarge-right">
+      <div class="headshot-container">
+        <img src="assets/images/headshot.webp" alt="A headshot of me" class="img-rounded img-full-width" />
+        
+        <div class="text-center">
+          <h1>Daire Finn</h1>
+          <div>Software developer</div>
+          <div>Mayo, Ireland.</div>
+          @if(environment.phoneNumber) {
+            <div>
+              <span class="fa fa-fw fa-phone"></span>
+              <span>&nbsp;{{environment.phoneNumber}}</span>
+            </div>
+          }
+          @if(environment.emailAddress) {
+            <div class="text-nowrap">
+              <span class="fa fa-fw fa-envelope"></span>
+              <span>&nbsp;<a [href]="'mailto:' + environment.emailAddress">{{environment.emailAddress}}</a></span>
+            </div>
+          }
+          <div>
+            <span class="fa fa-fw fa-globe"></span>
+            <span>&nbsp;<a href="dairefinn.com">dairefinn.com</a></span>
+          </div>
+        </div>
+        <p>
+          <a href="mailto:hello@dairefinn.com"></a>
+        </p>
+      </div>
+    
+      <div class="main-description">
+        <app-card>
+          <h1>My experience</h1>
+          @for (careerEntry of careerEntries; track careerEntry) {
+            <app-career-entry-small [careerEntry]="careerEntry"></app-career-entry-small>
+          }
+        </app-card>
+        
+        <app-card>
+          <h1>My education</h1>
+          @for (certificationEntry of educationEntries; track certificationEntry) {
+            <app-career-entry-small [careerEntry]="certificationEntry"></app-career-entry-small>
+          }
+        </app-card>
+      
+        <app-card>
+          <h1>My own projects</h1>
+          <!-- @for (projectItem of projectEntries; track projectItem) {
+            <app-project-entry [projectEntry]="projectItem"></app-project-entry>
+          } -->
+        </app-card>
+      
+        <app-card>
+          <h1>Technologies I have experience with</h1>
+          <p>Sample text here</p>
+        </app-card>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center print-hidden">
+    <app-button (click)="downloadAsPDF()" title="Download this page as a PDF">
+      <span>Download as PDF&nbsp;</span>
+      <span class="fa fa-fw fa-download clickable"></span>
+    </app-button>
+  </div>
+</div>
