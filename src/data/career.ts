@@ -159,5 +159,14 @@ export const careerEntriesCertifications: CareerEntry[] = [
 export const careerEntries: CareerEntry[] = [
   ...careerEntriesEvents,
   ...careerEntriesPositions,
-  ...careerEntriesCertifications
+  ...careerEntriesCertifications,
+  {
+    type: CareerEntryType.EVENT,
+    title: 'Present day',
+    description: `
+        I am still working at Frankli as a Senior Software Engineer.<br/>
+        We are busy maintaining our existing platform and are always working on new features.
+        `,
+    startDate: new Date(),
+  }
 ].sort((a, b) => b.startDate?.getTime() - a.startDate?.getTime());
