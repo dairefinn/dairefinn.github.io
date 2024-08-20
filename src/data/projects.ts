@@ -11,6 +11,20 @@ export type ProjectItem = {
 
 export const projects: ProjectItem[] = [
     {
+        title: 'S&Box Game Jam II entry - FarmH&',
+        description: `
+            <img src="assets/images/farmhand.webp" alt="FarmH&" class="img-full-width img-rounded"/>
+            <br/><br/>
+            S&Box is a new in-development game engine built on top of the Source 2 engine. I am working alongside a group of friends to create a game for <a href="https://sbox.game/c/gamejam2">S&Box's Game Jam II</a> - a farming game with a horror twist called "FarmH&". The aim of the game is to grow and sell enough Melons to buy a car and leave the sinister farmer's farm.
+            <br/><br/>
+            We have each taken ownership of different features of the project and have been working on them in isolation before we can tie it all together into a coherent game. So far I have been responsible for implementing a bunch of features relating to item manipulation - picking them up, placing them down, moving them around in the inventory and using them.
+            <br/><br/>
+            The game logic is written in C# and the UI is Razor and SCSS. S&Box is still in it's developer preview so the documentation is sparse and there are very few examples to learn from. This has been a fun challenge so far and we've made good progress by reverse engineering the parts of the engine that are exposed and looking at some existing projects.
+            `,
+        tags: [Tag.GAME_DEV],
+        startDate: new Date('2024-09-16')
+    },
+    {
         title: 'Batch script to toggle between Wired and Wireless connection',
         description: `
             My mobile hotspot is much faster than my wired connection but my wired connection is much more reliable so I usually use the hotspot to download large files and then switch back to the wired connection for everything else.
