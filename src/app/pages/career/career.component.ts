@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { NavigationTabOption, NavigationTabsComponent } from '../../components/navigation-tabs/navigation-tabs.component';
 import { PageWrapperComponent } from '../../components/page-wrapper/page-wrapper.component';
+import { ButtonComponent } from '../../components/button/button.component';
 
 @Component({
   selector: 'app-career',
@@ -9,7 +10,8 @@ import { PageWrapperComponent } from '../../components/page-wrapper/page-wrapper
   imports: [
     RouterModule,
     NavigationTabsComponent,
-    PageWrapperComponent
+    PageWrapperComponent,
+    ButtonComponent
   ],
   templateUrl: './career.component.html',
   styleUrl: './career.component.scss'
@@ -35,5 +37,10 @@ export class CareerComponent {
 
   get isOnPageCV(): boolean {
     return this.router.url.endsWith('/overview');
+  }
+
+  public downloadCV(): void {
+    // Download file from assets/docs/CV-public.pdf
+    window.open('/assets/docs/CV-public.pdf', '_blank');
   }
 }

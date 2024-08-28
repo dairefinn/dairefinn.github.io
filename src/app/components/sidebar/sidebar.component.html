@@ -17,5 +17,13 @@
                 <app-sidebar-link [sidebarItem]="sidebarItem"></app-sidebar-link>
             }
         </ul>
+
+        <div class="navigation-heading">Downloads</div>
+        <ul class="area-download-links">
+            @for (sidebarItem of downloadLinks; track sidebarItem) {
+                <app-sidebar-link [sidebarItem]="sidebarItem"></app-sidebar-link>
+            }
+        </ul>
+
     </div>
 </div>

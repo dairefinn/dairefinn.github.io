@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { SidebarLinkComponent, SidebarLinkItem } from '../sidebar-link/sidebar-link.component';
+import { SidebarItemType, SidebarLinkComponent, SidebarLinkItem } from '../sidebar-link/sidebar-link.component';
 
 @Component({
   selector: 'app-sidebar',
@@ -19,25 +19,25 @@ export class SidebarComponent {
       title: 'GitHub',
       icon: 'fa-brands fa-fw fa-github',
       route: 'https://github.com/dairefinn',
-      isExternal: true
+      itemType: SidebarItemType.EXTERNAL
     },
     {
       title: 'LinkedIn',
       icon: 'fa-brands fa-fw fa-linkedin',
       route: 'https://www.linkedin.com/in/daire-finn-44b883263/',
-      isExternal: true
+      itemType: SidebarItemType.EXTERNAL
     },
     {
       title: 'Spotify',
       icon: 'fa-brands fa-fw fa-spotify',
       route: 'https://open.spotify.com/user/dman355/',
-      isExternal: true
+      itemType: SidebarItemType.EXTERNAL
     },
     {
       title: 'Instagram',
       icon: 'fa-brands fa-fw fa-instagram',
       route: 'https://www.instagram.com/dairefinn/',
-      isExternal: true
+      itemType: SidebarItemType.EXTERNAL
     }
   ];
 
@@ -45,23 +45,36 @@ export class SidebarComponent {
     {
       title: 'Home',
       icon: 'fa fa-fw fa-home',
-      route: '/home'
+      route: '/home',
+      itemType: SidebarItemType.INTERNAL
     },
     {
       title: 'Projects',
       icon: 'far fa-fw fa-folder-open',
-      route: '/projects'
+      route: '/projects',
+      itemType: SidebarItemType.INTERNAL
     },
     {
       title: 'Career',
       icon: 'fa fa-fw fa-briefcase',
-      route: '/career'
+      route: '/career',
+      itemType: SidebarItemType.INTERNAL
     },
     {
       title: 'Contact',
       icon: 'fa fa-fw fa-envelope',
-      route: '/contact'
+      route: '/contact',
+      itemType: SidebarItemType.INTERNAL
     }
   ];
+
+  downloadLinks: SidebarLinkItem[] = [
+    {
+      title: 'My CV',
+      icon: 'fa fa-fw fa-file-pdf',
+      route: '/assets/docs/CV-dairefinn-public.pdf',
+      itemType: SidebarItemType.DOWNLOAD
+    }
+  ]
 
 }

@@ -2,11 +2,18 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
+
+export enum SidebarItemType {
+  EXTERNAL = 'EXTERNAL',
+  INTERNAL = 'INTERNAL',
+  DOWNLOAD = 'DOWNLOAD'
+}
+
 export interface SidebarLinkItem {
   title: string;
   icon: string;
   route: string;
-  isExternal?: boolean;
+  itemType: SidebarItemType;
 }
 
 @Component({
@@ -20,6 +27,8 @@ export interface SidebarLinkItem {
   styleUrl: './sidebar-link.component.scss'
 })
 export class SidebarLinkComponent {
+
+  public readonly eSidebarItemType = SidebarItemType;
 
   @Input() sidebarItem?: SidebarLinkItem;
 

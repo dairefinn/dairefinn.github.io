@@ -1,21 +1,33 @@
 @if (sidebarItem) {
     <li>
-        @if (sidebarItem.isExternal) {
-            <a [href]="sidebarItem.route" target="_blank">
-                <ng-container *ngTemplateOutlet="linkInnerContent"></ng-container>
-            </a>
-        }
-        @else {
-            <a [routerLink]="sidebarItem.route" routerLinkActive="active">
-                <ng-container *ngTemplateOutlet="linkInnerContent"></ng-container>
-            </a>
+        @switch (sidebarItem.itemType) {
+            @case (eSidebarItemType.EXTERNAL) {
+                <a [href]="sidebarItem.route" target="_blank">
+                    <ng-container *ngTemplateOutlet="linkInnerContent"></ng-container>
+                </a>
+            }
+            @case (eSidebarItemType.INTERNAL) {
+                <a [routerLink]="sidebarItem.route" routerLinkActive="active">
+                    <ng-container *ngTemplateOutlet="linkInnerContent"></ng-container>
+                </a>
+            }
+            @case (eSidebarItemType.DOWNLOAD) {
+                <a [href]="sidebarItem.route" download>
+                    <ng-container *ngTemplateOutlet="linkInnerContent"></ng-container>
+                </a>
+            }
         }
 
         <ng-template #linkInnerContent>
             <span [ngClass]="sidebarItem.icon"></span>
             <span class="navigation-link-title">{{ sidebarItem.title }}</span>
-            @if (sidebarItem.isExternal) {
-                <span class="fa fa-fw fa-arrow-up-right-from-square"></span>
+            @switch (sidebarItem.itemType) {
+                @case (eSidebarItemType.EXTERNAL) {
+                    <span class="fa fa-fw fa-external-link"></span>
+                }
+                @case (eSidebarItemType.DOWNLOAD) {
+                    <span class="fa fa-fw fa-download"></span>
+                }
             }
         </ng-template>
     </li>

@@ -2,6 +2,11 @@
 @use 'breakpoints';
 
 .container-component-career {
+    .area-csv-download {
+        text-align: center;
+        padding-bottom: 16px;
+    }
+
     .area-navigation-tabs {
         .area-navigation-tabs-inner {
             display: flex;
