@@ -41,6 +41,6 @@ export class CareerComponent {
 
   public downloadCV(): void {
     // Download file from assets/docs/CV-public.pdf
-    window.open('/assets/docs/CV-public.pdf', '_blank');
+    window.open('/assets/docs/CV-dairefinn-public.pdf', '_blank');
   }
 }
