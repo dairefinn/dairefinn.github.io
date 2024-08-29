@@ -23,10 +23,10 @@
             <span class="navigation-link-title">{{ sidebarItem.title }}</span>
             @switch (sidebarItem.itemType) {
                 @case (eSidebarItemType.EXTERNAL) {
-                    <span class="fa fa-fw fa-external-link"></span>
+                    <span class="sidebar-type-icon fa fa-fw fa-external-link"></span>
                 }
                 @case (eSidebarItemType.DOWNLOAD) {
-                    <span class="fa fa-fw fa-download"></span>
+                    <span class="sidebar-type-icon fa fa-fw fa-download"></span>
                 }
             }
         </ng-template>

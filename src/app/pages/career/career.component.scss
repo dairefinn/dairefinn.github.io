@@ -4,7 +4,7 @@
 .container-component-career {
     .area-csv-download {
         text-align: center;
-        padding-bottom: 16px;
+        padding-bottom: 32px;
     }
 
     .area-navigation-tabs {
@@ -13,6 +13,12 @@
             justify-content: center;
             padding-bottom: 32px;
             width: 100%;
+        }
+    }
+
+    @include breakpoints.md {
+        .area-csv-download {
+            display: none;
         }
     }
 }

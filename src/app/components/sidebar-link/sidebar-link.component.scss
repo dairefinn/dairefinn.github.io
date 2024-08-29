@@ -31,6 +31,10 @@ li {
         & > .navigation-link-title {
             line-height: .8rem;
         }
+
+        .sidebar-type-icon {
+            display: none;
+        }
     }
 
     @include breakpoints.xs {
@@ -52,6 +56,10 @@ li {
 
             .navigation-link-title {
                 display: block;
+            }
+            
+            .sidebar-type-icon {
+                display: inline;
             }
         }
     }

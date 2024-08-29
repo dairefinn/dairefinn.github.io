@@ -1,17 +1,18 @@
 <div class="container-component-career">
     <app-page-wrapper>
-        <!-- <div class="area-csv-download print-hidden">
-            <app-button (click)="downloadCV()" title="Download my CV">
-                <span>Download my CV&nbsp;</span>
-                <span class="fa fa-fw fa-download clickable"></span>
-            </app-button>
-        </div> -->
-
         <div class="area-navigation-tabs" [class.print-hidden]="isOnPageCV">
             <div class="area-navigation-tabs-inner">
                 <app-navigation-tabs [options]="optionsNavigation"></app-navigation-tabs>
             </div>
         </div>
+        
+        <div class="area-csv-download print-hidden">
+            <app-button (click)="downloadCV()" title="Download my CV">
+                <span>Download my CV&nbsp;</span>
+                <span class="fa fa-fw fa-download clickable"></span>
+            </app-button>
+        </div>
+
         <router-outlet/>
     </app-page-wrapper>
 </div>

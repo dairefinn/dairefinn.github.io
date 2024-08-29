@@ -29,19 +29,19 @@
         display: flex;
         margin: 0;
         padding: 0;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         user-select: none;
-
-        &.area-internal-links {
-            flex-wrap: nowrap;
-
-            & > * {
-                flex-grow: 1;
-            }
-        }
 
         &.area-external-links {
             display: none;
+        }
+
+        &.area-download-links {
+            display: none;
+        }
+        
+        & > * {
+            flex-grow: 1;
         }
     }
 
@@ -58,8 +58,13 @@
 
         ul {
             flex-direction: column;
+            display: block;
 
             &.area-external-links {
+                display: block;
+            }
+
+            &.area-download-links {
                 display: block;
             }
         }
