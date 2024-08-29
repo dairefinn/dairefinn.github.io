@@ -3,6 +3,7 @@ import { Router, RouterModule } from '@angular/router';
 import { NavigationTabOption, NavigationTabsComponent } from '../../components/navigation-tabs/navigation-tabs.component';
 import { PageWrapperComponent } from '../../components/page-wrapper/page-wrapper.component';
 import { ButtonComponent } from '../../components/button/button.component';
+import { CV_DOWNLOAD_LINK } from '../../../data/career';
 
 @Component({
   selector: 'app-career',
@@ -40,7 +41,6 @@ export class CareerComponent {
   }
 
   public downloadCV(): void {
-    // Download file from assets/docs/CV-public.pdf
-    window.open('/assets/docs/CV-dairefinn-public.pdf', '_blank');
+    window.open(CV_DOWNLOAD_LINK, '_blank');
   }
 }

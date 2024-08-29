@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { SidebarItemType, SidebarLinkComponent, SidebarLinkItem } from '../sidebar-link/sidebar-link.component';
+import { CV_DOWNLOAD_LINK } from '../../../data/career';
 
 @Component({
   selector: 'app-sidebar',
@@ -72,7 +73,7 @@ export class SidebarComponent {
     {
       title: 'My CV',
       icon: 'fa fa-fw fa-file-pdf',
-      route: '/assets/docs/CV-dairefinn-public.pdf',
+      route: CV_DOWNLOAD_LINK,
       itemType: SidebarItemType.DOWNLOAD
     }
   ]
