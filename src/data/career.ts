@@ -15,7 +15,7 @@ export type CareerEntry = {
   link?: string;
 };
 
-export const CV_DOWNLOAD_LINK = '/assets/docs/CV-dairefinn-public.pdf';
+export const RESUME_DOWNLOAD_LINK = '/assets/docs/resume-dairefinn-public.pdf';
 
 export const careerEntriesEvents: CareerEntry[] = [
   {

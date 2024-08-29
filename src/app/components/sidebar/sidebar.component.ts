@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { SidebarItemType, SidebarLinkComponent, SidebarLinkItem } from '../sidebar-link/sidebar-link.component';
-import { CV_DOWNLOAD_LINK } from '../../../data/career';
+import { RESUME_DOWNLOAD_LINK } from '../../../data/career';
 
 @Component({
   selector: 'app-sidebar',
@@ -71,9 +71,9 @@ export class SidebarComponent {
 
   downloadLinks: SidebarLinkItem[] = [
     {
-      title: 'My CV',
+      title: 'My resume',
       icon: 'fa fa-fw fa-file-pdf',
-      route: CV_DOWNLOAD_LINK,
+      route: RESUME_DOWNLOAD_LINK,
       itemType: SidebarItemType.DOWNLOAD
     }
   ]
