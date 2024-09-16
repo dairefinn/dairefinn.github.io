@@ -11,18 +11,46 @@ export type ProjectItem = {
 
 export const projects: ProjectItem[] = [
     {
+        title: 'Lorekeeper fork',
+        description: `
+            One of my friends is planning to run a long-term TTRPG campaign set in the Pokemon universe and needed some help modding a framework called <a href="https://lorekeeper.me/">Lorekeeper</a> to suit their needs.
+            <br/><br/>
+            It is a Pokemon based ARPG, web-based game with randomized traits and species, includes currency, shops, masterlist, unique character IDs, art and writing prompts.
+            <br/><br/>
+            Players submit creative works for currency/related rewards in exchange for character creation or items to modify existing characters.
+            <br/><br/>
+            The project uses PHP and Laravel, which I've never used before so I've been learning how these work as I go.
+            <br/><br/>
+            Currently, I have modified the character creation so that the species and traits are randomly generated instead of being defined by the player. This includes a "drop rate" system where some traits are rarer than others.
+            <br/><br/>
+            I am working on adding consumable items that can be used to modify the character's traits and species.
+            `,
+        tags: [Tag.GAME_DEV, Tag.WEB_DEV],
+        link: 'https://github.com/dairefinn/lorekeeper',
+        startDate: new Date('2024-09-14')
+    },
+    {
         title: 'S&Box Game Jam II entry - FarmH&',
         description: `
             <img src="assets/images/farmhand.webp" alt="FarmH&" class="img-full-width img-rounded"/>
             <br/><br/>
             S&Box is a new in-development game engine built on top of the Source 2 engine. I am working alongside a group of friends to create a game for <a href="https://sbox.game/c/gamejam2">S&Box's Game Jam II</a> - a farming game with a horror twist called "FarmH&". The aim of the game is to grow and sell enough Melons to buy a car and leave the sinister farmer's farm.
             <br/><br/>
-            We have each taken ownership of different features of the project and have been working on them in isolation before we can tie it all together into a coherent game. So far I have been responsible for implementing a bunch of features relating to item manipulation - picking them up, placing them down, moving them around in the inventory and using them.
-            <br/><br/>
+            We have each taken ownership of different features of the project and have been working on them in isolation before we can tie it all together into a coherent game. So far I have implemented quite a few features including:
+            <ul>
+                <li>Player movement</li>
+                <li>Inventory and item system</li>
+                <li>NPC dialogue system</li>
+                <li>Planting, watering, fertilizing and growing of crops</li>
+                <li>Buying tools and selling crops</li>
+                <li>Day/night cycle</li>
+                <li>Vehicles</li>
+                <li>Map design</li>
+            </ul>
             The game logic is written in C# and the UI is Razor and SCSS. S&Box is still in it's developer preview so the documentation is sparse and there are very few examples to learn from. This has been a fun challenge so far and we've made good progress by reverse engineering the parts of the engine that are exposed and looking at some existing projects.
             `,
         tags: [Tag.GAME_DEV],
-        startDate: new Date('2024-09-16')
+        startDate: new Date('2024-08-16')
     },
     {
         title: 'Batch script to toggle between Wired and Wireless connection',
