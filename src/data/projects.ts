@@ -13,17 +13,17 @@ export const projects: ProjectItem[] = [
     {
         title: 'Lorekeeper fork',
         description: `
-            One of my friends is planning to run a long-term TTRPG campaign set in the Pokemon universe and needed some help modding a framework called <a href="https://lorekeeper.me/">Lorekeeper</a> to suit their needs.
+            A friend of mine wanted to create a Pokémon-themed Art RPG for their community using the <a href="https://lorekeeper.me/" target="_blank">Lorekeeper</a> framework. However, they lacked the technical skills to set it up and customize it to fit their vision.
             <br/><br/>
-            It is a Pokemon based ARPG, web-based game with randomized traits and species, includes currency, shops, masterlist, unique character IDs, art and writing prompts.
+            The concept revolves around players generating character prompts, which include a Pokémon species and various traits. Players then submit artwork based on these prompts, earning in-game currency or items in return. These rewards can be used to re-roll or modify the species and traits for future characters.
             <br/><br/>
-            Players submit creative works for currency/related rewards in exchange for character creation or items to modify existing characters.
+            While Lorekeeper offers many of the features needed for this game, there were some additional functionalities my friend wanted. To address this, I forked the project and made custom modifications.
             <br/><br/>
-            The project uses PHP and Laravel, which I've never used before so I've been learning how these work as I go.
+            One major change I implemented was to randomize the character creation process, so that species and traits are generated randomly rather than selected by the player. I also introduced a "drop rate" system, where certain traits are rarer than others.
             <br/><br/>
-            Currently, I have modified the character creation so that the species and traits are randomly generated instead of being defined by the player. This includes a "drop rate" system where some traits are rarer than others.
+            In addition, I added consumable items that allow players to modify or re-roll species and traits in their character prompts.
             <br/><br/>
-            I am working on adding consumable items that can be used to modify the character's traits and species.
+            The project is built using PHP 8 and Laravel, both of which were new to me, so I’ve been learning as I go. It also involved some configuration tweaks to the MySQL database and Apache server on the VPS.
             `,
         tags: [Tag.GAME_DEV, Tag.WEB_DEV],
         link: 'https://github.com/dairefinn/lorekeeper',
@@ -34,7 +34,7 @@ export const projects: ProjectItem[] = [
         description: `
             <img src="assets/images/farmhand.webp" alt="FarmH&" class="img-full-width img-rounded"/>
             <br/><br/>
-            S&Box is a new in-development game engine built on top of the Source 2 engine. I am working alongside a group of friends to create a game for <a href="https://sbox.game/c/gamejam2">S&Box's Game Jam II</a> - a farming game with a horror twist called "FarmH&". The aim of the game is to grow and sell enough Melons to buy a car and leave the sinister farmer's farm.
+            S&Box is a new in-development game engine built on top of the Source 2 engine. I am working alongside a group of friends to create a game for <a href="https://sbox.game/c/gamejam2" target="_blank">S&Box's Game Jam II</a> - a farming game with a horror twist called "FarmH&". The aim of the game is to grow and sell enough Melons to buy a car and leave the sinister farmer's farm.
             <br/><br/>
             We have each taken ownership of different features of the project and have been working on them in isolation before we can tie it all together into a coherent game. So far I have implemented quite a few features including:
             <ul>
