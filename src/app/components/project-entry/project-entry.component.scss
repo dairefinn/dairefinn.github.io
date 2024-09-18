@@ -1,0 +1,60 @@
+@use 'theme';
+@use 'breakpoints';
+
+.container-component-project-entry {
+    .project-item-top-row {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        margin-bottom: 15px;
+
+        .project-item-top-row-side {
+            padding: 8px;
+
+            & > .fa-fw {
+                transition: transform 240ms;
+            }
+        }
+
+        .project-item-top-row-main {
+            .display-project-item-title {
+                display: flex;
+                gap: 8px;
+                align-items: center;
+                font-weight: 600;
+                font-size: 1.25rem;
+            }
+        
+            .display-project-item-url {
+                display: flex;
+                gap: 8px;
+                align-items: center;
+                color: theme.$white-300;
+            }
+        }
+    }
+
+    & > p {
+        margin-top: 0;
+    }
+
+    .display-project-item-tags {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 16px;
+        color: theme.$white-300;
+        cursor: default;
+        font-weight: 600;
+    }
+
+    &.project-item-dropdown-expanded {
+        .project-item-top-row {
+            .project-item-top-row-side {
+                & > .fa-fw {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+@if(projectItem) {
+    <div class="container-component-project-entry" [class.project-item-dropdown-expanded]="dropdownExpanded">
+        <div class="project-item-top-row">
+            <div class="project-item-top-row-side" (click)="toggleExpanded()">
+                <span class="fa fa-fw fa-chevron-right"></span>
+            </div>
+
+            <div class="project-item-top-row-main">
+                <div class="display-project-item-title">
+                    <span>{{projectItem.title}}</span>
+                </div>
+            
+                <div class="display-project-item-url">
+                    @if (projectItem.link) {
+                        <span class="fa fa-fw fa-link"></span>
+                        <a [href]="projectItem.link" target="_blank" rel="noopener noreferrer">{{projectItem.link}}</a>
+                    }
+                    @else {
+                        <span>&nbsp;</span>
+                    }
+                </div>
+            </div>
+        </div>
+    
+        @if(dropdownExpanded == true) {
+            <p [innerHTML]="projectItem.description"></p>
+
+            @if (projectItem.tags && projectItem.tags.length > 0) {
+                <div class="display-project-item-tags">
+                    @for (tagItem of projectItem.tags; track tagItem) {
+                        <app-tag [tag]="tagItem"></app-tag>
+                    }
+                </div>
+            }
+        }
+    </div>
+}
