@@ -25,10 +25,29 @@
     .display-career-item-where {
         padding-top: 8px;
         display: flex;
+        flex-wrap: wrap;
         gap: 8px;
         align-items: center;
         color: theme.$white-300;
+        // white-space: nowrap;
+        
+        .display-career-item-company,
+        .display-career-item-location {
+            white-space: nowrap;
+
+            & > a {
+                & > span:not(.fa-fw) {
+                    white-space: normal;
+                }
+            }
+
+            & > span:not(.fa-fw) {
+                white-space: normal;
+            }
+
+        }
     }
+
     
     @include breakpoints.md {
         .display-career-item-date-mobile {
