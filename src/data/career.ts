@@ -131,13 +131,23 @@ export const careerEntriesPositions: CareerEntry[] = [
     company: 'Frankli',
     location: 'Remote',
     startDate: new Date(2023, 10, 5),
-    endDate: undefined,
+    endDate: new Date(2024, 11, 1),
     description: `
         I received a promotion to Senior Software Developer but since I was already managing all the technical aspects of the company, my responsibilities didn't change much.
         <br/><br/>
         We managed to keep things running smoothly with just the three of us and we even managed to secure some new clients.
         `,
     link: 'https://getfrankli.com',
+  },
+  {
+    type: CareerEntryType.EVENT,
+    title: 'Career Break',
+    description: `
+        After 6 years of working at Frankli, I decided to take a break from work to recharge and refocus.
+        <br/><br/>
+        I spent my time off working on some personal projects, learning new technologies and traveling.
+        `,
+    startDate: new Date(2024, 11, 1),
   }
 ].sort((a, b) => b.startDate?.getTime() - a.startDate?.getTime());
 
@@ -166,9 +176,8 @@ export const careerEntries: CareerEntry[] = [
     type: CareerEntryType.EVENT,
     title: 'Present day',
     description: `
-        I am still working at Frankli as a Senior Software Engineer.<br/>
-        We are busy maintaining our existing platform and are always working on new features.
+        I am currently looking for new work opportunities.
         `,
-    startDate: new Date(),
+    startDate: new Date()
   }
 ].sort((a, b) => b.startDate?.getTime() - a.startDate?.getTime());
