@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProjectItem, projects } from '../../../data/projects';
+import { ProjectItem, projects, ProjectStatus } from '../../../data/projects';
 import { DatePipe } from '@angular/common';
 import { TagComponent } from '../../components/tag/tag.component';
 import { PageWrapperComponent } from '../../components/page-wrapper/page-wrapper.component';
@@ -16,6 +16,8 @@ import { PageWrapperComponent } from '../../components/page-wrapper/page-wrapper
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
+
+  public readonly eProjectStatus = ProjectStatus;
 
   projectEntries: ProjectItem[] = projects;
 

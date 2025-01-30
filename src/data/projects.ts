@@ -1,5 +1,11 @@
 import { Tag } from "./tag";
 
+export enum ProjectStatus {
+    ACTIVE = 'Active',
+    INACTIVE = 'Inactive',
+    COMPLETED = 'Completed'
+}
+
 export type ProjectItem = {
     title: string;
     description: string;
@@ -7,6 +13,7 @@ export type ProjectItem = {
     startDate?: Date;
     link?: string;
     isFeatured?: boolean;
+    status: ProjectStatus;
 }
 
 export const projects: ProjectItem[] = [
@@ -27,7 +34,8 @@ export const projects: ProjectItem[] = [
             `,
         tags: [Tag.GAME_DEV, Tag.WEB_DEV],
         link: 'https://github.com/dairefinn/lorekeeper',
-        startDate: new Date('2024-09-14')
+        startDate: new Date('2024-09-14'),
+        status: ProjectStatus.ACTIVE
     },
     {
         title: 'S&Box Game Jam II entry - FarmH&',
@@ -50,7 +58,8 @@ export const projects: ProjectItem[] = [
             The game logic is written in C# and the UI is Razor and SCSS. S&Box is still in it's developer preview so the documentation is sparse and there are very few examples to learn from. This has been a fun challenge so far and we've made good progress by reverse engineering the parts of the engine that are exposed and looking at some existing projects.
             `,
         tags: [Tag.GAME_DEV],
-        startDate: new Date('2024-08-16')
+        startDate: new Date('2024-08-16'),
+        status: ProjectStatus.INACTIVE
     },
     {
         title: 'Batch script to toggle between Wired and Wireless connection',
@@ -63,7 +72,8 @@ export const projects: ProjectItem[] = [
             `,
         tags: [Tag.SHELL, Tag.NETWORKING],
         link: 'https://github.com/dairefinn/windows-script-wlan-wifi-toggle',
-        startDate: new Date('2024-08-08')
+        startDate: new Date('2024-08-08'),
+        status: ProjectStatus.COMPLETED
     },
     {
         title: 'This website',
@@ -80,12 +90,13 @@ export const projects: ProjectItem[] = [
             `,
         tags: [Tag.WEB_DEV, Tag.DEV_OPS],
         link: 'https://github.com/dairefinn/dairefinn.github.io',
-        startDate: new Date('2024-07-29')
+        startDate: new Date('2024-07-29'),
+        status: ProjectStatus.ACTIVE
     },
     {
         title: 'Reverse proxy over TailScale',
         description: `
-            My home network has a double NAT and for some inexplicable reason, the gateway router crashes when I try to log in to it from my subnet. As a result, I cannot port forward without having to physically restart it.
+            My home network has a fairly complex setup because it is a subnet of the house next door temporarily. For some reason, the gateway router crashes when I try to log in to it from my subnet. As a result, I cannot port forward without having to physically restart it.
             <br/><br/>
             As the person who hosts most if not all of our game servers, this was a problem. Sure - I could just have bought another big VPS in the cloud and hosted the servers there but I have the server hardware available so I wanted to use it.
             <br/><br/>
@@ -94,21 +105,34 @@ export const projects: ProjectItem[] = [
             We haven't noticed any issues with latency or packet loss so far.
             <br/><br/>
             This costs me like 5 euro a month and works flawlessly - with the added benefit of letting my friends connect using a domain name instead of an IP address.
+            <br/><br/>
+            Update: I no longer need this set up as we have had a line installed to our house and I can now port forward without issue.
             `,
         tags: [Tag.NETWORKING],
         link: undefined,
-        startDate: new Date('2024-07-29')
+        startDate: new Date('2024-07-29'),
+        status: ProjectStatus.COMPLETED
     },
     {
         title: 'Godot game',
         description: `
             I\'ve always wanted to dabble in game development as a hobby because the field interests me. I decided to try out Godot because it\'s free and open source.
             <br/><br/>
-            Currently, this is a 3D movement shooter style game but it could change. I\'m not sure if I\'ll ever finish this but I\'m having fun with it so far and I find it interesting how different game dev is to my primary field of web dev.
+            Currently, this is a 3D movement shooter style game but it could change. I\'m not sure if I\'ll ever finish this but I\'m having fun with it so far and I find it interesting how different game dev is to my primary field of web dev
+            <br/><br/>
+            So far I have implemented:
+            <ul>
+                <li>Player walking, jumping, double jumping, sprinting, dashing and sliding</li>
+                <li>Camera movement</li>
+                <li>Basic enemy AI/State machine</li>
+                <li>Player health and damage</li>
+                <li>Inventory system</li>
+                <li>Pathfinding</li>
             `,
         tags: [Tag.GAME_DEV],
         link: 'https://github.com/dairefinn/daires-game',
-        startDate: new Date('2024-01-02')
+        startDate: new Date('2024-01-02'),
+        status: ProjectStatus.ACTIVE
     },
     {
         title: 'Discord bot',
@@ -119,7 +143,8 @@ export const projects: ProjectItem[] = [
             `,
         tags: [Tag.WEB_DEV],
         link: 'https://github.com/dairefinn/discord-bot',
-        startDate: new Date('2023-10-26')
+        startDate: new Date('2023-10-26'),
+        status: ProjectStatus.INACTIVE
     },
     {
         title: 'Geforce Now Searcher',
@@ -134,7 +159,8 @@ export const projects: ProjectItem[] = [
             `,
         tags: [Tag.WEB_DEV],
         link: 'https://github.com/dairefinn/geforce-now-searcher',
-        startDate: new Date('2021-12-05')
+        startDate: new Date('2021-12-05'),
+        status: ProjectStatus.COMPLETED
     },
     {
         title: 'Slope v2',
@@ -149,7 +175,8 @@ export const projects: ProjectItem[] = [
             `,
         tags: [Tag.GAME_DEV],
         link: 'https://github.com/dairefinn/slope_v2',
-        startDate: new Date('2020-09-30')
+        startDate: new Date('2020-09-30'),
+        status: ProjectStatus.INACTIVE
     },
     {
         title: 'Workspace function',
@@ -164,7 +191,8 @@ export const projects: ProjectItem[] = [
             `,
         tags: [Tag.SHELL],
         link: 'https://github.com/dairefinn/workspace-function',
-        startDate: new Date('2020-05-19')
+        startDate: new Date('2020-05-19'),
+        status: ProjectStatus.COMPLETED
     },
     {
         title: 'RadarrSync',
@@ -177,6 +205,7 @@ export const projects: ProjectItem[] = [
             `,
         tags: [Tag.CONTAINERS, Tag.SOURCE_CONTROL],
         link: 'https://github.com/dairefinn/RadarrSync',
-        startDate: new Date('2019-02-17')
+        startDate: new Date('2019-02-17'),
+        status: ProjectStatus.COMPLETED
     },
 ].sort((a, b) => b.startDate?.getTime() - a.startDate?.getTime());

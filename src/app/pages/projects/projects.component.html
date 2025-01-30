@@ -9,6 +9,18 @@
                     <div class="display-project-item-details">
                         <div class="display-project-item-title">
                             <span>{{projectItem.title}}</span>
+
+                            @switch(projectItem.status) {
+                                @case(eProjectStatus.COMPLETED) {
+                                    <span class="display-project-item-status display-project-item-status-completed">Completed</span>
+                                }
+                                @case(eProjectStatus.ACTIVE) {
+                                    <span class="display-project-item-status display-project-item-status-wip">Active</span>
+                                }
+                                <!-- @case(eProjectStatus.INACTIVE) {
+                                    <span class="display-project-item-status display-project-item-status-inactive">Inactive</span>
+                                } -->
+                            }
                         </div>
     
                         @if (projectItem.link) {
