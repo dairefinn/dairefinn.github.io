@@ -31,6 +31,8 @@ export const projects: ProjectItem[] = [
             In addition, I added consumable items that allow players to modify or re-roll species and traits in their character prompts.
             <br/><br/>
             The project is built using PHP 8 and Laravel, both of which were new to me, so I’ve been learning as I go. It also involved some configuration tweaks to the MySQL database and Apache server on the VPS.
+            <br/><br/>
+            We've recently incorporated some closed source extensions so any of the latest changes will not be visible in the public repository, which only contains my personal modifications before the extensions were added.
             `,
         tags: [Tag.GAME_DEV, Tag.WEB_DEV],
         link: 'https://github.com/dairefinn/lorekeeper',
