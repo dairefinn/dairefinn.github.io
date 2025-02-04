@@ -131,7 +131,6 @@ export const projects: ProjectItem[] = [
                 <li>Inventory system</li>
                 <li>Pathfinding</li>
             </ul>
-            <br/><br/>
             The game logic code is written in C#. The visuals either using primitive shapes or free assets from Itch.io.
             `,
         tags: [Tag.GAME_DEV],
