@@ -130,9 +130,12 @@ export const projects: ProjectItem[] = [
                 <li>Player health and damage</li>
                 <li>Inventory system</li>
                 <li>Pathfinding</li>
+            </ul>
+            <br/><br/>
+            The game logic code is written in C#. The visuals either using primitive shapes or free assets from Itch.io.
             `,
         tags: [Tag.GAME_DEV],
-        link: 'https://github.com/dairefinn/daires-game',
+        link: 'https://github.com/dairefinn/sneak-game',
         startDate: new Date('2024-01-02'),
         status: ProjectStatus.ACTIVE
     },
