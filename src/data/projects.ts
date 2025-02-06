@@ -18,6 +18,20 @@ export type ProjectItem = {
 
 export const projects: ProjectItem[] = [
     {
+        title: 'This website but in React using Vite',
+        description: `
+            During my job search, I noticed that a lot of companies were using React instead of Angular. Having used some React previously and Expo heavily for my college third year project, I've always known that they were similar but I wanted to get some more experience with React incase there were any recent changes that I was unaware of.
+            <br/><br/>
+            I decided the best way to do this would be to recreate this website in React. The React documentation suggests using a framework when setting up new projects so I asked some of my friends who work with React professionally which one they would recommend. They all suggested Vite so I went with that.
+            <br/><br/>
+            I was pleasantly surprised at how fast I got everything converted over. The only real issue I had was with the routing. Angular has a bunch of built in features that make routing easy but React requires you to use a library. I set up React Router and got everything working as expected.
+            `,
+        tags: [Tag.WEB_DEV],
+        link: 'https://github.com/dairefinn/personal-website-vite',
+        startDate: new Date('2025-02-06'),
+        status: ProjectStatus.COMPLETED
+    },
+    {
         title: 'Lorekeeper fork',
         description: `
             A friend of mine wanted to create a Pokémon-themed Art RPG for their community using the <a href="https://lorekeeper.me/" target="_blank">Lorekeeper</a> framework. However, they lacked the technical skills to set it up and customize it to fit their vision.
