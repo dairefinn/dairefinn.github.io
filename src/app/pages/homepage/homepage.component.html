@@ -10,7 +10,15 @@
           <div class="main-description">
             <h1>Hey, I'm Daire</h1>
             <p>
-              I'm a software developer based in Mayo, Ireland. I'm currently working at <a href="https://www.getfrankli.com" target="_blank">Frankli</a> as a Senior Software Developer.
+              <span>I'm a software developer based in Mayo, Ireland.&nbsp;</span>
+              <span>{{latestPositionIsActive ?  "I am currently working at" : "I previously worked at"}}&nbsp;</span>
+              @if(latestPosition.link) {
+                <a [href]="latestPosition.link" target="_blank">{{latestPosition.company}}</a>
+              }
+              @else {
+                <span>{{latestPosition.company}}</span>
+              }
+              <span>&nbsp;as a {{latestPosition.title}}.</span>
             </p>
             <p>
               Most of my hobbies are related to technology in some way. I enjoy playing video games, listening to music and watching movies.
@@ -25,12 +33,12 @@
           <p>
             There is rarely a moment when I'm not listening to something. I have a wide range of tastes and I'm always on the lookout for new music.
             <br/><br/>
-            Here's what I've been listening to lately:
+            If you're interested in seeing what I've been listening to lately, the playlist below is automatically updated with the songs I've been listening to the most.
           </p>
           @if(viewingSpotifyPlaylist) {
             <iframe class="iframe-spotify-playlist" src="https://open.spotify.com/embed/playlist/37i9dQZF1Epwk7SuBT7N2r?theme=0" width="100%" height="480" frameBorder="0" allow="fullscreen" loading="lazy"></iframe>
             <div class="text-center">
-              <app-button (click)="toggleShowSpotifyPlaylist()" title="See what I've been listening to lately">
+              <app-button (click)="toggleShowSpotifyPlaylist()" title="Collapse playlist">
                 <span>Collapse playlist&nbsp;</span>
                 <span class="fa fa-fw fa-chevron-up clickable"></span>
               </app-button>
@@ -38,8 +46,8 @@
           }
           @else {
             <div class="text-center">
-              <app-button (click)="toggleShowSpotifyPlaylist()" title="See what I've been listening to lately">
-                <span>See what I've been listening to lately&nbsp;</span>
+              <app-button (click)="toggleShowSpotifyPlaylist()" title="View playlist">
+                <span>View playlist&nbsp;</span>
                 <span class="fa fa-fw fa-chevron-down clickable"></span>
               </app-button>
             </div>

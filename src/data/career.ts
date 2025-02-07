@@ -74,6 +74,16 @@ export const careerEntriesEvents: CareerEntry[] = [
     startDate: new Date(2023, 7, 10),
     endDate: null
   },
+  {
+    type: CareerEntryType.EVENT,
+    title: 'Career Break',
+    description: `
+        After 6 years of working at Frankli, I decided to take a break from work to recharge and refocus.
+        <br/><br/>
+        I spent my time off working on some personal projects, learning new technologies and traveling.
+        `,
+    startDate: new Date(2024, 11, 1),
+  }
 ].sort((a, b) => b.startDate?.getTime() - a.startDate?.getTime());
 
 export const careerEntriesPositions: CareerEntry[] = [
@@ -138,16 +148,6 @@ export const careerEntriesPositions: CareerEntry[] = [
         We managed to keep things running smoothly with just the three of us and we even managed to secure some new clients.
         `,
     link: 'https://getfrankli.com',
-  },
-  {
-    type: CareerEntryType.EVENT,
-    title: 'Career Break',
-    description: `
-        After 6 years of working at Frankli, I decided to take a break from work to recharge and refocus.
-        <br/><br/>
-        I spent my time off working on some personal projects, learning new technologies and traveling.
-        `,
-    startDate: new Date(2024, 11, 1),
   }
 ].sort((a, b) => b.startDate?.getTime() - a.startDate?.getTime());
 
