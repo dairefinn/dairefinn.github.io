@@ -18,6 +18,20 @@ export type ProjectItem = {
 
 export const projects: ProjectItem[] = [
     {
+        title: 'This website in Next.js',
+        description: `
+            After creating this website again in React using Vite, I wanted to try Next.js too as I was seeing it used a lot in job postings I was looking at.
+            <br/><br/>
+            Most of the work of converting the original Angular site to React was already done with the Vite version so this was a fairly quick project. Again, the only real issue I had was with the routing as Next.js has a built in router which works differently to React Router, which I had used in the Vite version.
+            <br/><br/>
+            I got it all working in the end and I ended up liking Next.js more than Vite. The built in features were a big help in getting everything working so quickly.
+            `,
+        tags: [Tag.WEB_DEV],
+        link: 'https://github.com/dairefinn/personal-website-nextjs',
+        startDate: new Date('2025-02-06'),
+        status: ProjectStatus.COMPLETED
+    },
+    {
         title: 'This website but in React using Vite',
         description: `
             During my job search, I noticed that a lot of companies were using React instead of Angular. Having used some React previously and Expo heavily for my college third year project, I've always known that they were similar but I wanted to get some more experience with React incase there were any recent changes that I was unaware of.

@@ -21,7 +21,7 @@ export const technologyEntries: TechnologyItem[] = [
             },
             {
                 title: 'This website',
-                description: 'This website is built in Angular. I have also created a few other projects in Angular. I created an exact copy of this website in React using Vite to learn how it works.'
+                description: 'This website is built in Angular. I have also created a few other projects in Angular. I created an exact copy of this website in React using Vite to learn how it works. Afterwards, I created another in Next.js for the same reason.'
             },
             {
                 title: 'College',
