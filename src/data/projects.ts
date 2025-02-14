@@ -24,7 +24,7 @@ export const projects: ProjectItem[] = [
             <br/><br/>
             Most of the work of converting the original Angular site to React was already done with the previous version so this was a fairly quick project. Again, the only real issue I had was with the routing as Next.js has a built in router which works differently to React Router, which I had used previously.
             <br/><br/>
-            The process was much easier with Next.js and I enjoyed working with React.
+            The process was much easier with Next.js and overall, I have enjoyed using React so far.
             `,
         tags: [Tag.WEB_DEV],
         link: 'https://github.com/dairefinn/personal-website-nextjs',
