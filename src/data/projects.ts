@@ -20,11 +20,11 @@ export const projects: ProjectItem[] = [
     {
         title: 'This website in Next.js',
         description: `
-            After creating this website again in React using Vite, I wanted to try Next.js too as I was seeing it used a lot in job postings I was looking at.
+            After creating this website again in React, I wanted to try it again using an actual framework. I was seeing Next.js in a lot of job postings so I decided to give it a go.
             <br/><br/>
-            Most of the work of converting the original Angular site to React was already done with the Vite version so this was a fairly quick project. Again, the only real issue I had was with the routing as Next.js has a built in router which works differently to React Router, which I had used in the Vite version.
+            Most of the work of converting the original Angular site to React was already done with the previous version so this was a fairly quick project. Again, the only real issue I had was with the routing as Next.js has a built in router which works differently to React Router, which I had used previously.
             <br/><br/>
-            I got it all working in the end and I ended up liking Next.js more than Vite. The built in features were a big help in getting everything working so quickly.
+            The process was much easier with Next.js and I enjoyed working with React.
             `,
         tags: [Tag.WEB_DEV],
         link: 'https://github.com/dairefinn/personal-website-nextjs',
@@ -36,9 +36,9 @@ export const projects: ProjectItem[] = [
         description: `
             During my job search, I noticed that a lot of companies were using React instead of Angular. Having used some React previously and Expo heavily for my college third year project, I've always known that they were similar but I wanted to get some more experience with React incase there were any recent changes that I was unaware of.
             <br/><br/>
-            I decided the best way to do this would be to recreate this website in React. The React documentation suggests using a framework when setting up new projects so I asked some of my friends who work with React professionally which one they would recommend. They all suggested Vite so I went with that.
+            I decided the best way to do this would be to recreate this website in React. I chose Vite as the build tool because it was recommended to me by some friends.
             <br/><br/>
-            I was pleasantly surprised at how fast I got everything converted over. The only real issue I had was with the routing. Angular has a bunch of built in features that make routing easy but React requires you to use a library. I set up React Router and got everything working as expected.
+            I was pleasantly surprised at how fast I got everything converted over. The only real issue I had was with the routing. The React documentation recommends using a framework when starting off but I mistook Vite for a full framework and not just a build tool so nothing was included in the install for routing. I set up React Router and got everything working as expected fairly quickly.
             `,
         tags: [Tag.WEB_DEV],
         link: 'https://github.com/dairefinn/personal-website-vite',
