@@ -41,7 +41,7 @@ export const projects: ProjectItem[] = [
             I was pleasantly surprised at how fast I got everything converted over. The only real issue I had was with the routing. The React documentation recommends using a framework when starting off but I mistook Vite for a full framework and not just a build tool so nothing was included in the install for routing. I set up React Router and got everything working as expected fairly quickly.
             `,
         tags: [Tag.WEB_DEV],
-        link: 'https://github.com/dairefinn/personal-website-vite',
+        link: 'https://github.com/dairefinn/personal-website-react',
         startDate: new Date('2025-02-06'),
         status: ProjectStatus.COMPLETED
     },
