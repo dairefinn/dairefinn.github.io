@@ -16,4 +16,5 @@ export enum Tag {
     CLOUD_INFRASTRUCTURE = 'Cloud infrastructure',
     DESIGN = 'Design',
     UI_UX = 'UI/UX',
+    MACHINE_LEARNING = 'Machine learning',
 }

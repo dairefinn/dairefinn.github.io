@@ -18,6 +18,22 @@ export type ProjectItem = {
 
 export const projects: ProjectItem[] = [
     {
+        title: 'Ollama front-end in React',
+        description: `
+            After watching <a href="https://www.youtube.com/watch?v=rqSAezpebqg" target="_blank">this video</a> and watching one of my friends using the mod, I was inspired to try running an LLM locally and querying it via an API.
+            <br/><br/>
+            I remember the setup for local models being a bit of a pain from when I was using them in college. Many of the programs for running the models required using python and a bunch of dependencies that I didn't want to install, especially because managing all of them on Windows isn't a great experience.
+            <br/><br/>
+            After a bit of research, I found <a href="https://github.com/ollama/ollama" target="_blank">Ollama</a> which seemed to have the simplest setup process and also offers an API for interacting with the models. The main downsides of this is that you an only use the models that they officially support and I can't automatically start the model with the front-end. I may swap it out later for something like <a href="https://github.com/Mozilla-Ocho/llamafile" target="_blank">Llamafile</a> which allows you to run models from a source file and offers a bit more customization but that's not a big deal for now.
+            <br/><br/>
+            The front-end is very basic but I've been trying to use React more so I decided to make it in that.
+            `,
+        tags: [Tag.MACHINE_LEARNING],
+        link: 'https://github.com/dairefinn/ollama-react-frontend',
+        startDate: new Date('2025-02-19'),
+        status: ProjectStatus.ACTIVE
+    },
+    {
         title: 'This website in Next.js',
         description: `
             After creating this website again in React, I wanted to try it again using an actual framework. I was seeing Next.js in a lot of job postings so I decided to give it a go.
