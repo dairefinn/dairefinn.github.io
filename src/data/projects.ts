@@ -30,7 +30,7 @@ export const projects: ProjectItem[] = [
             `,
         tags: [Tag.MACHINE_LEARNING],
         link: 'https://github.com/dairefinn/ollama-react-frontend',
-        startDate: new Date('2025-02-19'),
+        startDate: new Date('2025-02-18'),
         status: ProjectStatus.ACTIVE
     },
     {
