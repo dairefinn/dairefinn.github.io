@@ -18,15 +18,42 @@ export type ProjectItem = {
 
 export const projects: ProjectItem[] = [
     {
+        title: 'Advanced AI decision making',
+        description: `
+            With the recent closure of Monolith, creators of game FEAR, there has been lots of discussion online about their revolutionary AI system. I was reading through <a target="_blank" href="https://www.gamedevs.org/uploads/three-states-plan-ai-of-fear.pdf">the paper written by the designer</a> and decided that I wanted to see what I can do with the system.
+            <br/><br/>
+            Currently, the agent has two goals:
+            <ol>
+                <li>Ensure visbility</li>
+                <li>Patrol</li>
+            </ol>
+            They can achieve these goals using the following actions:
+            <ul>
+                <li>Turn on light</li>
+                <li>Equip sword</li>
+                <li>Patrol house (Requires a sword to be equipped)</li>
+            </ul>
+            The agent will use the GOAP system to come up with a plan to satisfy these goals (in order of priority) based on their current world state. The process here is quite interesting because it builds a tree of possible action permutations and then chooses the lowest cost path to the desired state as a plan.
+            <br/><br/>
+            By restricting the agent's options via their world state, this system gives the illusion of more intelligent decision making and squad behaviour, despite the fact that each agent is choosing their goals and actions separately to any other agents around them.
+            `,
+        tags: [Tag.GAME_DEV],
+        link: 'https://github.com/dairefinn/dimworld',
+        startDate: new Date('2025-03-09'),
+        status: ProjectStatus.ACTIVE
+    },
+    {
         title: 'Ollama front-end in React',
         description: `
             After watching <a href="https://www.youtube.com/watch?v=rqSAezpebqg" target="_blank">this video</a> and watching one of my friends using the mod, I was inspired to try running an LLM locally and querying it via an API.
             <br/><br/>
             I remember the setup for local models being a bit of a pain from when I was using them in college. Many of the programs for running the models required using python and a bunch of dependencies that I didn't want to install, especially because managing all of them on Windows isn't a great experience.
             <br/><br/>
-            After a bit of research, I found <a href="https://github.com/ollama/ollama" target="_blank">Ollama</a> which seemed to have the simplest setup process and also offers an API for interacting with the models. The main downsides of this is that you an only use the models that they officially support and I can't automatically start the model with the front-end. I may swap it out later for something like <a href="https://github.com/Mozilla-Ocho/llamafile" target="_blank">Llamafile</a> which allows you to run models from a source file and offers a bit more customization but that's not a big deal for now.
+            After a bit of research, I found <a href="https://github.com/ollama/ollama" target="_blank">Ollama</a> which seemed to have the simplest setup process and also offers an API for interacting with the models. The main downside of this is that you an only use the models that they officially support. I may swap it out later for something like <a href="https://github.com/Mozilla-Ocho/llamafile" target="_blank">Llamafile</a> which allows you to run models from a source file and offers a bit more customization but that's not a big deal for now.
             <br/><br/>
-            The front-end is very basic but I've been trying to use React more so I decided to make it in that.
+            I've been trying to use React more so I decided to make the front-end using it. Currently you can query the model or have a conversation with it. The conversation feature will allow you to have a back and forth conversation with the model where it remembers any previous messages. These conversations can be exported and re-imported so they can be returned to later. I've also got message streaming working but the model response contains a <thinking> tag which gives context on it's "thought process" so the message won't start streaming until after that is received. This is just because I'm doing some parsing to filter it out and display it separately under a dropdown, which would cause the message component to re-render whenever the closing tag is received.
+            <br/><br/>
+            I plan to add some sort of back-end here so that the conversations are persisted locally without having to export/import them manually. I also want to see if I can do something with image generation models. Maybe some way to switch models midway through a conversation too so that you can ask questions and generate images in the same context.
             `,
         tags: [Tag.MACHINE_LEARNING],
         link: 'https://github.com/dairefinn/ollama-react-frontend',
@@ -160,7 +187,7 @@ export const projects: ProjectItem[] = [
         status: ProjectStatus.COMPLETED
     },
     {
-        title: 'Godot game',
+        title: 'Godot stealth game',
         description: `
             I\'ve always wanted to dabble in game development as a hobby because the field interests me. I decided to try out Godot because it\'s free and open source.
             <br/><br/>
@@ -180,7 +207,7 @@ export const projects: ProjectItem[] = [
         tags: [Tag.GAME_DEV],
         link: 'https://github.com/dairefinn/sneak-game',
         startDate: new Date('2024-01-02'),
-        status: ProjectStatus.ACTIVE
+        status: ProjectStatus.INACTIVE
     },
     {
         title: 'Discord bot',
