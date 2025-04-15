@@ -148,6 +148,18 @@ export const careerEntriesPositions: CareerEntry[] = [
         We managed to keep things running smoothly with just the three of us and we even managed to secure some new clients.
         `,
     link: 'https://getfrankli.com',
+  },
+  {
+    type: CareerEntryType.POSITION,
+    title: 'Software Engineer',
+    company: 'Tines',
+    location: 'Remote',
+    startDate: new Date(2025, 3, 14),
+    endDate: null,
+    description: `
+        I have just started a position as a Software Engineer at Tines.
+        `,
+    link: 'https://tines.com',
   }
 ].sort((a, b) => b.startDate?.getTime() - a.startDate?.getTime());
 
@@ -172,12 +184,12 @@ export const careerEntries: CareerEntry[] = [
   ...careerEntriesEvents,
   ...careerEntriesPositions,
   ...careerEntriesCertifications,
-  {
-    type: CareerEntryType.EVENT,
-    title: 'Present day',
-    description: `
-        I am currently looking for new work opportunities.
-        `,
-    startDate: new Date()
-  }
+  // {
+  //   type: CareerEntryType.EVENT,
+  //   title: 'Present day',
+  //   description: `
+  //       I am currently looking for new work opportunities.
+  //       `,
+  //   startDate: new Date()
+  // }
 ].sort((a, b) => b.startDate?.getTime() - a.startDate?.getTime());
